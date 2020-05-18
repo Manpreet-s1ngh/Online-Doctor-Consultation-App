@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PatientSignupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/tv2"
+          android:text="Patient Signup"
+          android:textSize="24sp"
+          android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et1"
+            android:hint="FullName"
+            android:inputType="text" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et2"
+            android:hint="Email"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:id="@+id/et3"
+            android:inputType="textPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ConfirmPassword"
+            android:id="@+id/et4"
+            android:inputType="textPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone no"
+            android:id="@+id/et5"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Photo"
+            android:id="@+id/tv1"
+            android:textSize="18sp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/imv1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:id="@+id/Bt1"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:onClick="go"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:id="@+id/Bt2"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:onClick="go2"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Signup"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/Bt3"
+            android:onClick="go3"/>
+
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>
+
+
+
+
+

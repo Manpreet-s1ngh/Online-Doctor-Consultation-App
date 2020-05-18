@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".AddScheduleActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >
+
+
+    <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.216" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/ll1"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <Button
+            android:id="@+id/Bt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Database"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            android:onClick="go"/>
+
+
+    </LinearLayout>

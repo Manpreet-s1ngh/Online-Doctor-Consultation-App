@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_1"
+            android:title="Add Schedule" />
+        <item
+            android:id="@+id/nav_2"
+            android:title="Manage Schedule" />
+        <item
+            android:id="@+id/nav_8"
+            android:title="Manage Gallery" />
+        <item
+            android:id="@+id/nav_3"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_4"
+            android:title="Manage Prescription" />
+        <item
+            android:id="@+id/nav_5"
+            android:title="View Appointment" />
+
+        <item
+            android:id="@+id/nav_6"
+            android:title="Edit Profile" />
+        <item
+            android:id="@+id/nav_7"
+            android:title="Logout" />
+
+
+    </group>
+</menu>
