@@ -129,6 +129,9 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
                 break;
 
             case R.id.nav_3:
+                Intent intent6 = new Intent(this,DoctorChangePasswordActivity.class);
+
+                startActivity(intent6);
                 Toast.makeText(this," Change Password",Toast.LENGTH_SHORT).show();
                 break;
 

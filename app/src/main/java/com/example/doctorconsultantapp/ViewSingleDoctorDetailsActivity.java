@@ -72,6 +72,7 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
 
     public void go2(View view)
     {
-
+       Intent intent1 = new Intent(this,ReviewDoctorActivity.class);
+       startActivity(intent1);
     }
 }

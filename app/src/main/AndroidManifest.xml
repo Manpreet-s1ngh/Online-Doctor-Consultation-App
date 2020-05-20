@@ -13,9 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ImageActivity2" android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
-        <activity android:name=".ViewPrescriptionActivity"
-            />
+        <activity android:name=".PatientChangePasswordActivity"></activity>
+        <activity android:name=".DoctorChangePasswordActivity" />
+        <activity android:name=".ReviewDoctorActivity" />
+        <activity
+            android:name=".ImageActivity2"
+            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+        <activity android:name=".ViewPrescriptionActivity" />
         <activity
             android:name=".Image_Activity"
             android:theme="@style/Base.Theme.AppCompat.Dialog" />

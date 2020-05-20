@@ -108,6 +108,8 @@ public class PatientHomeActivity extends AppCompatActivity implements Navigation
                 break;
 
             case R.id.nav_ChangePassword:
+                Intent intent3 = new Intent(this,PatientChangePasswordActivity.class);
+                startActivity(intent3);
                 Toast.makeText(this,"Change Password Selected",Toast.LENGTH_SHORT).show();
                 break;
 
