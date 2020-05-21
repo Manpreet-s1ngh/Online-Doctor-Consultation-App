@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,19 @@
     tools:context=".AdminHome"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/Bt1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to Admin Home"
-        android:textSize="24sp"/>
+        android:text="Change Password"
+        android:textSize="24sp"
+        android:onClick="go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
