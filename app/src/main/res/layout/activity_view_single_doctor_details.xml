@@ -33,7 +33,7 @@
 
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/name"
+                android:src="@drawable/one"
 
                 android:layout_gravity="right"
                 android:layout_width="50dp"
@@ -58,7 +58,7 @@
 
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/ic_call_black_24dp"
+                android:src="@drawable/one"
 
                 android:layout_gravity="right"
                 android:layout_width="50dp"
@@ -105,7 +105,7 @@
 
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/rupee"
+                android:src="@drawable/one"
 
                 android:layout_gravity="right"
                 android:layout_width="50dp"
@@ -129,7 +129,7 @@
 
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/visiting"
+                android:src="@drawable/one"
 
                 android:layout_gravity="right"
                 android:layout_width="50dp"
@@ -152,7 +152,7 @@
 
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/gmail"
+                android:src="@drawable/one"
 
                 android:layout_gravity="right"
                 android:layout_width="50dp"

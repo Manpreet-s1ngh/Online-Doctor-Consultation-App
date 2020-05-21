@@ -9,15 +9,14 @@ public class ReviewDetails
     String Comment;
     String Date;
     Long Time;
-    String D_Name;
-    String Category;
+
 
     public ReviewDetails()
     {
 
     }
 
-    public ReviewDetails(String reviewId, String p_key, String d_key, String rating, String comment, String date, Long time, String d_Name, String category) {
+    public ReviewDetails(String reviewId, String p_key, String d_key, String rating, String comment, String date, Long time) {
         ReviewId = reviewId;
         P_key = p_key;
         D_key = d_key;
@@ -25,8 +24,6 @@ public class ReviewDetails
         Comment = comment;
         Date = date;
         Time = time;
-        D_Name = d_Name;
-        Category = category;
     }
 
     public String getReviewId() {
@@ -83,21 +80,5 @@ public class ReviewDetails
 
     public void setTime(Long time) {
         Time = time;
-    }
-
-    public String getD_Name() {
-        return D_Name;
-    }
-
-    public void setD_Name(String d_Name) {
-        D_Name = d_Name;
-    }
-
-    public String getCategory() {
-        return Category;
-    }
-
-    public void setCategory(String category) {
-        Category = category;
     }
 }

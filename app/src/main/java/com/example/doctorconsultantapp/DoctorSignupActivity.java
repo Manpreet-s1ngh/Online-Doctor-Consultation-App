@@ -163,7 +163,7 @@ public class DoctorSignupActivity extends AppCompatActivity {
                                 String downloadpath = uri.toString();
                                 String key = mainref_db.push().getKey();
 
-                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key);
+                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending");
                                 mainref_db.child(key).setValue(obj);
                                 finish();
 
@@ -199,7 +199,7 @@ public class DoctorSignupActivity extends AppCompatActivity {
                                 String downloadpath = uri.toString();
                                 String key = mainref_db.push().getKey();
 
-                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key);
+                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending");
                                 mainref_db.child(key).setValue(obj);
                                 finish();
 

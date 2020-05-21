@@ -57,7 +57,7 @@ public class PatientLoginActivity extends AppCompatActivity {
                                     SharedPreferences.Editor editor = sharedPreferences.edit();
                                     editor.putString("UserName", obj.getEmail());
                                     editor.putString("Patient_Key", obj.getPatientKey());
-                                    editor.apply();
+                                    editor.commit();
                                     flag = 1;
                                     break;
 

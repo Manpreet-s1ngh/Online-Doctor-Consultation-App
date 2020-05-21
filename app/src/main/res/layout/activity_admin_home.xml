@@ -12,6 +12,9 @@
         android:layout_height="wrap_content"
         android:text="Welcome to Admin Home"
         android:textSize="24sp"/>
-
+<Button
+    android:id="@+id/bt1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
 </LinearLayout>

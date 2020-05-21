@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.tabs.TabLayout;
@@ -15,6 +16,8 @@ import com.google.android.material.tabs.TabLayout;
 public class ReviewDoctorActivity extends AppCompatActivity {
     TabLayout tb1;
     ViewPager vp111;
+    String dkey ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +29,9 @@ public class ReviewDoctorActivity extends AppCompatActivity {
 
         myadapter myad = new myadapter(getSupportFragmentManager());
         vp111.setAdapter(myad);
+        Intent in = getIntent();
+        dkey = in.getStringExtra("d_key");
+
 
         tb1.setupWithViewPager(vp111);
     }
@@ -44,11 +50,11 @@ public class ReviewDoctorActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             if (position==0)
             {
-                return (new ViewReview());
+                return (new ViewReview(dkey));
 
             }
             else
-                return (new PostReview());
+                return (new PostReview(dkey));
         }
 
         @Override
