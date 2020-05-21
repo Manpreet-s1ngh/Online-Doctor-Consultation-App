@@ -1,6 +1,6 @@
 package com.example.doctorconsultantapp;
 
-public class ReviewDetails
+public class ReviewDetails implements Comparable
 {
     String ReviewId;
     String P_key;
@@ -80,5 +80,11 @@ public class ReviewDetails
 
     public void setTime(Long time) {
         Time = time;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        ReviewDetails o2  = (ReviewDetails) o;
+        return (int) (o2.Time - this.Time);
     }
 }

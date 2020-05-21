@@ -118,7 +118,7 @@ String dkey;
                 else {
                     String pushkey = maianref.push().getKey();
                     Date d = new Date();
-                    SimpleDateFormat df = new SimpleDateFormat("dd-Mm-yyyy");
+                    SimpleDateFormat df = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss aa");
                     String date = df.format(d);
                     ReviewDetails obj = new ReviewDetails(pushkey,pkey,dkey,ratedValue+"",comment,date,d.getTime());
                     maianref.child(pushkey).setValue(obj);
