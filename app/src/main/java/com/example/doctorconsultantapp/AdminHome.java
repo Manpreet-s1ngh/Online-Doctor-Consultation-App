@@ -3,15 +3,14 @@ package com.example.doctorconsultantapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-<<<<<<< HEAD
+
 import android.os.Bundle;
 import android.view.View;
-=======
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
->>>>>>> f05ff515b4b99082dfdffdfbdf287ed1aa3a39f7
 
 public class AdminHome extends AppCompatActivity {
 Button bt1;
