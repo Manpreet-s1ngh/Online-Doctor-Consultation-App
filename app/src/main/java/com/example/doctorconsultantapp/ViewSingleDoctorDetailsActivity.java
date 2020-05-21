@@ -16,6 +16,7 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
    TextView tv111,tv222,tv333,tv444,tv555,tv666,tv777;
    ImageView imv111;
    Button  bt1,bt2;
+    String d_key;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
 //        intent.putExtra("email",dd.getEmail());
 //        intent.putExtra("image",dd.getImagepath());
         Intent incomingintent = getIntent();
-        String d_key= incomingintent.getStringExtra("did");
+       d_key = incomingintent.getStringExtra("did");
         String fullName = incomingintent.getStringExtra("FullName");
         String PhoneNo = incomingintent.getStringExtra("PhoneNo");
         String Experience = incomingintent.getStringExtra("Experience");
@@ -73,6 +74,9 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
     public void go2(View view)
     {
        Intent intent1 = new Intent(this,ReviewDoctorActivity.class);
+       intent1.putExtra("d_key",d_key);
+
+
        startActivity(intent1);
     }
 }

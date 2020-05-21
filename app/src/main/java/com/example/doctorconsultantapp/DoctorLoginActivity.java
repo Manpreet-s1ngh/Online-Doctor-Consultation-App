@@ -77,7 +77,7 @@ public class DoctorLoginActivity extends AppCompatActivity {
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putString("Doctorid", obj.getD_key());
                                 editor.putString("DoctorEmail", obj.getEmail());
-                                editor.apply();
+                                editor.commit();
                                 flag = 1;
                                 break;
 

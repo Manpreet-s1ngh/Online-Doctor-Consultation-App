@@ -116,10 +116,10 @@ public class PatientHomeActivity extends AppCompatActivity implements Navigation
             case R.id.nav_Logout:
                 SharedPreferences sharedPreference=getSharedPreferences("Patient",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreference.edit();
-                editor.remove("......");
+                editor.remove("UserName");
                 editor.apply();
                 finish();
-                Intent intent2 = new Intent(getApplicationContext(),PatientLoginActivity.class);
+                Intent intent2 = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent2);
                 Toast.makeText(this,"Logout Selected",Toast.LENGTH_SHORT).show();
                 break;

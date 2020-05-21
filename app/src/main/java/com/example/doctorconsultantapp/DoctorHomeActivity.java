@@ -155,10 +155,10 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
 
                 SharedPreferences sharedPreference=getSharedPreferences("Doctor",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreference.edit();
-                editor.remove("......");
+                editor.remove("Doctorid");
                 editor.apply();
                 finish();
-                Intent intent = new Intent(getApplicationContext(),DoctorLoginActivity.class);
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
 
                 Toast.makeText(this,"Logout",Toast.LENGTH_SHORT).show();

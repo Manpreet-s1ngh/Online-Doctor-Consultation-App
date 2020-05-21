@@ -14,13 +14,14 @@ public class Doctor_details
      String EndHour;
      String imagepath;
      String d_key;
+     String status;
 
    public Doctor_details()
     {
 
     }
 
-    public Doctor_details(String fullName, String email, String password, String category, String phoneNo, String basicFees, String experience, String service, String startHour, String endHour, String imagepath, String d_key) {
+    public Doctor_details(String fullName, String email, String password, String category, String phoneNo, String basicFees, String experience, String service, String startHour, String endHour, String imagepath, String d_key, String status) {
         FullName = fullName;
         Email = email;
         Password = password;
@@ -33,6 +34,7 @@ public class Doctor_details
         EndHour = endHour;
         this.imagepath = imagepath;
         this.d_key = d_key;
+        this.status = status;
     }
 
     public String getFullName() {
@@ -129,5 +131,13 @@ public class Doctor_details
 
     public void setD_key(String d_key) {
         this.d_key = d_key;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }
