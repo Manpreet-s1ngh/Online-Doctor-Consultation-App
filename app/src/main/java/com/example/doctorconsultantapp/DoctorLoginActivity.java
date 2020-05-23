@@ -73,6 +73,7 @@ public class DoctorLoginActivity extends AppCompatActivity {
                             Doctor_details obj = Doctor.getValue(Doctor_details.class);
                             Log.d("mymsg",Doctorid+"..."+obj.getEmail()+"...."+pass+"..."+obj.getPassword());
                             if (Doctorid.equals(obj.getEmail()) && pass.equals(obj.getPassword())) {
+                                if(obj.getStatus().equals("approve")){
                                 SharedPreferences sharedPreferences = getSharedPreferences("Doctor", MODE_PRIVATE);
                                 SharedPreferences.Editor editor = sharedPreferences.edit();
                                 editor.putString("Doctorid", obj.getD_key());
@@ -80,6 +81,12 @@ public class DoctorLoginActivity extends AppCompatActivity {
                                 editor.commit();
                                 flag = 1;
                                 break;
+                                }
+                                else {
+                                    flag =4 ;
+                                    break;
+
+                                }
 
                             }
 
@@ -96,7 +103,9 @@ public class DoctorLoginActivity extends AppCompatActivity {
                         startActivity(intent);
                         Toast.makeText(DoctorLoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
 
-                    } else {
+                    } else  if (flag == 4){
+                        Toast.makeText(DoctorLoginActivity.this, "Your Status is Pending plz contact to admin", Toast.LENGTH_SHORT).show();
+                    }else {
                         Toast.makeText(DoctorLoginActivity.this, "Login unsuccessfull", Toast.LENGTH_SHORT).show();
                     }
                 }

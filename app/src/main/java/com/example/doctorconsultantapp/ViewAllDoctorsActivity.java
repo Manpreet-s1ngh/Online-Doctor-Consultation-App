@@ -47,8 +47,9 @@ public class ViewAllDoctorsActivity extends AppCompatActivity {
                 if(dataSnapshot.exists()){
                     for (DataSnapshot sin : dataSnapshot.getChildren()){
                         Doctor_details obj  = sin.getValue(Doctor_details.class);
-                        al.add(obj);
-
+                        if(obj.status.equals("approve")) {
+                            al.add(obj);
+                        }
                     }
                     myad.notifyDataSetChanged();
 

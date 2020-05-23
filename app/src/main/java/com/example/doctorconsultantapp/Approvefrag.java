@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -59,10 +60,10 @@ public class Approvefrag extends Fragment {
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         mainref  = firebaseDatabase.getReference("DoctorDetails");
-        mainref.orderByChild("status").equalTo("pending").addValueEventListener(new ValueEventListener() {
+        mainref.orderByChild("status").equalTo("approve").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Log.d("vmm",dataSnapshot.toString());
+                Log.d("vmm_approve",dataSnapshot.toString());
                 al.clear();
                 for (DataSnapshot sin : dataSnapshot.getChildren()){
                     Doctor_details obj = sin.getValue(Doctor_details.class);
@@ -121,10 +122,12 @@ public class Approvefrag extends Fragment {
             tv2.setText(dd.Experience);
             tv3.setText(dd.PhoneNo);
             tv4.setText(dd.BasicFees);
-            tv5.setText(dd.StartHour + "  " +  dd.EndHour);
+            tv5.setText(dd.category);
             bt1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    mainref.child(dd.getD_key()).child("status").setValue("pending");
+                    Toast.makeText(getActivity(), "Doctor Blocked Successfully", Toast.LENGTH_SHORT).show();
 
 
 
