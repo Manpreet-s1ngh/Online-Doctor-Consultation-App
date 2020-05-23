@@ -116,7 +116,7 @@ public class PatientHomeActivity extends AppCompatActivity implements Navigation
             case R.id.nav_Logout:
                 SharedPreferences sharedPreference=getSharedPreferences("Patient",MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreference.edit();
-                editor.remove("UserName");
+                editor.remove("Patient_Key");
                 editor.apply();
                 finish();
                 Intent intent2 = new Intent(getApplicationContext(),MainActivity.class);
