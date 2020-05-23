@@ -39,4 +39,10 @@ Button bt1;
         Intent intent = new Intent(this,AdminChangePasswordActivity.class);
         startActivity(intent);
     }
+
+    public void go2(View view)
+    {
+        Intent intent = new Intent(this,ManageDoctorActivity.class);
+        startActivity(intent);
+    }
 }

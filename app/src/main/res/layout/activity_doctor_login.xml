@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DoctorLoginActivity">
+    tools:context=".DoctorLoginActivity"
+    android:background="#85C1E9">
 
     <ImageView
         android:id="@+id/imv1"
