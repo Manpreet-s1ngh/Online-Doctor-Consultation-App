@@ -17,7 +17,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class PatientChangePasswordActivity extends AppCompatActivity {
+public class AdminChangePasswordActivity extends AppCompatActivity {
     EditText etusername,etoldpassword,etnewpassword,etconfirmpassword;
     Button Bt1;
     DatabaseReference adminref;
@@ -25,7 +25,8 @@ public class PatientChangePasswordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_patient_change_password);
+        setContentView(R.layout.activity_admin_change_password);
+
 
         etusername= findViewById(R.id.et1);
         etoldpassword= findViewById(R.id.et2);
@@ -33,10 +34,12 @@ public class PatientChangePasswordActivity extends AppCompatActivity {
         etconfirmpassword = findViewById(R.id.et4);
         Bt1 = findViewById(R.id.Bt1);
 
-        SharedPreferences sharedPreference=getSharedPreferences("Patient",MODE_PRIVATE);
-        did = sharedPreference.getString("Patient_Key","");
+        SharedPreferences sharedPreference=getSharedPreferences("Admin",MODE_PRIVATE);
+        did = sharedPreference.getString("Admin","");
+        Toast.makeText(this, "check :- "+did, Toast.LENGTH_SHORT).show();
+        Log.d("vmm",did);
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        adminref = firebaseDatabase.getReference("PatientDetails");
+        adminref = firebaseDatabase.getReference("Admin");
         etusername.setText(did);
         etusername.setEnabled(false);
         Bt1.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +62,7 @@ public class PatientChangePasswordActivity extends AppCompatActivity {
                     adminref.child(did).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            PatientDetails obj = dataSnapshot.getValue(PatientDetails.class);
+                            Login obj = dataSnapshot.getValue(Login.class);
                             if (obj != null) {
                                 if ( obj.getPassword().equals(password)) {
                                     adminref.child(username).child("password").setValue(newpassword);
@@ -81,5 +84,4 @@ public class PatientChangePasswordActivity extends AppCompatActivity {
             }
         });
     }
-    }
-
+}

@@ -3,6 +3,10 @@ package com.example.doctorconsultantapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
+import android.os.Bundle;
+import android.view.View;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -28,5 +32,11 @@ Button bt1;
 
             }
         });
+    }
+
+    public void go(View view)
+    {
+        Intent intent = new Intent(this,AdminChangePasswordActivity.class);
+        startActivity(intent);
     }
 }

@@ -13,7 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity"></activity>
+
+        <activity android:name=".AdminChangePasswordActivity"></activity>
         <activity android:name=".PatientChangePasswordActivity" />
         <activity android:name=".DoctorChangePasswordActivity" />
         <activity android:name=".ReviewDoctorActivity" />
