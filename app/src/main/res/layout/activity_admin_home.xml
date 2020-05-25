@@ -1,67 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminHome"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center"
+    >
+    <TextView
+        android:text="Welcome \n Admin"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="22dp"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
 
-    <ImageView
-        android:id="@+id/imv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/images"
-        app:layout_constraintBottom_toTopOf="@+id/Bt1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.456"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
 
-    <Button
-        android:id="@+id/Bt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="go"
-        android:text="Change Password"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
 
-    <Button
-        android:id="@+id/bt1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bt2"
-        app:layout_constraintVertical_bias="0.333" />
 
-    <Button
-        android:id="@+id/bt2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="go2"
-        android:text="Manage Doctors"
-        android:textSize="24sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.435"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Bt1"
-        app:layout_constraintVertical_bias="0.206" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:textSize="18sp"
+            android:onClick="go"
+            android:id="@+id/bt2"
+            android:text=" CHANGE PASSWORD"
+            android:textColor="#ffffff"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/button_style_selector"/>
+
+        <Button
+            android:textSize="18sp"
+            android:onClick="go2"
+            android:id="@+id/bt3"
+            android:text=" MANAGE Doctors"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/button_style_selector"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="15dp">
+        <Button
+            android:textSize="18sp"
+            android:id="@+id/bt1"
+            android:text=" Logout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#ffffff"
+            android:layout_weight="0.5"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:background="@drawable/button_style_selector"
+            />
+
+    </LinearLayout>
+
+>>>>>>> 9eb9a2fba5913a4a642385ad24c7e675ac35ce62
+
+</LinearLayout>

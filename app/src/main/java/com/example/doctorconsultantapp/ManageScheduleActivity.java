@@ -140,8 +140,8 @@ public class ManageScheduleActivity extends AppCompatActivity {
             tv22= convertView.findViewById(R.id.tv22);
             Bt1 = convertView.findViewById(R.id.Bt1);
 
-            tv11.setText(obj.slotstart);
-            tv22.setText(obj.slotend);
+            tv11.setText("From :-"+obj.slotstart);
+            tv22.setText("To :-"+obj.slotend);
             Bt1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

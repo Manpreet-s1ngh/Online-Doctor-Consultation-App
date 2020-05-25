@@ -28,7 +28,7 @@ public class DoctorLoginActivity extends AppCompatActivity {
     DatabaseReference mainref1;
     EditText et1;
     EditText et2;
-    Button Bt1;
+    Button Bt1,Bt3;
     int flag = 0;
 
     @Override
@@ -38,11 +38,19 @@ public class DoctorLoginActivity extends AppCompatActivity {
         et1 = findViewById(R.id.et1);
         et2 = findViewById(R.id.et2);
         Bt1 = findViewById(R.id.Bt1);
+        Bt3 = findViewById(R.id.Bt3);
 
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         mainref1 = firebaseDatabase.getReference("DoctorDetails");
 
+        Bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Doctor_Forget_Password.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
