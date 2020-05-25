@@ -8,20 +8,32 @@
     android:orientation="vertical">
 
 
+    <ImageView
+        android:id="@+id/imv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/images"
+        app:layout_constraintBottom_toTopOf="@+id/Bt1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.496" />
+
     <Button
         android:id="@+id/Bt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:onClick="go"
         android:text="Change Password"
         android:textSize="24sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintHorizontal_bias="0.429"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161" />
+        app:layout_constraintVertical_bias="0.541" />
 
     <Button
         android:id="@+id/bt1"
@@ -29,25 +41,27 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         android:textSize="24sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.564"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt2"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintVertical_bias="0.333" />
 
     <Button
         android:id="@+id/bt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="go2"
         android:text="Manage Doctors"
         android:textSize="24sp"
-        android:onClick="go2"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintHorizontal_bias="0.435"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bt1"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.206" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="#006064">
+    android:background="#16F71D  ">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:src="@drawable/abc"
-        android:background="#58D68D "
+        android:background="#5DADE2"
         android:id="@+id/imv1"
         android:layout_margin="10dp"/>
 
@@ -27,6 +27,8 @@
         android:layout_height="wrap_content"
         android:onClick="go"
         android:text="Admin Login"
+        android:textStyle="italic"
+        android:background="#C0C0C0"
         android:textSize="24sp"
         android:layout_margin="10dp"
         />
@@ -37,7 +39,9 @@
         android:layout_height="wrap_content"
         android:onClick="go2"
         android:text="Doctor Login"
+        android:background="#C0C0C0"
         android:textSize="24sp"
+        android:textStyle="italic"
         android:layout_margin="10dp"
 
 
@@ -49,7 +53,9 @@
         android:layout_height="wrap_content"
         android:onClick="go3"
         android:text="Patient Login"
+        android:background="#C0C0C0"
         android:textSize="24sp"
+        android:textStyle="italic"
         android:layout_margin="10dp"
 
         />
