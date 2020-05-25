@@ -99,20 +99,27 @@
        android:layout_width="match_parent"
        android:layout_height="350dp"
        android:id="@+id/imv1"/>
-    <Button
+    <LinearLayout
+        android:weightSum="2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Bt1"
-        android:text="Choose Photo From Camera"
-        android:textSize="24sp"
-        android:onClick="go"/>
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Bt2"
-        android:text="Choose Photo from Gallery"
-        android:textSize="24sp"
-        android:onClick="go2"/>
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bt1"
+            android:text=" Camera"
+           android:layout_weight="1"
+            android:onClick="go"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Bt2"
+            android:text="Gallery"
+           android:layout_weight="1"
+            android:onClick="go2"/>
+    </LinearLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

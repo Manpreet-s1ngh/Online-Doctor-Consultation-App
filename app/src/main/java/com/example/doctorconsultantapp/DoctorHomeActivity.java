@@ -43,6 +43,8 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
     TextView tv1,tv2,tv3,tv4;
     String did;
 
+    String drname,category,endhr,starthr,phone,basicfees,imagepath,exp , service,key;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +64,7 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
 
         mainref2 = firebaseDatabase.getReference("DoctorDetails");
 
-        mainref2.orderByChild("d_key").equalTo(did).addListenerForSingleValueEvent(new ValueEventListener() {
+        mainref2.orderByChild("d_key").equalTo(did).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Log.d("datasnap",dataSnapshot.toString());
@@ -76,6 +78,17 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
                     tv3.setText(obj.PhoneNo);
                     tv4.setText(obj.Experience);
                     Picasso.get().load(obj.getImagepath()).into(imv1);
+                    drname = obj.FullName;
+                    category = obj.getCategory();
+
+                            endhr = obj.getEndHour();
+                            starthr = obj.getStartHour();
+                            phone = obj.getPhoneNo();
+                            basicfees= obj.getBasicFees();
+                            imagepath= obj.getImagepath();
+                    exp = obj.getExperience();
+                    service = obj.getService();
+                    key = obj.getD_key();
                 }
             }
 
@@ -149,6 +162,20 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
 
             case R.id.nav_6:
                 Toast.makeText(this,"Edit Profile",Toast.LENGTH_SHORT).show();
+                Intent in = new Intent(this,Doctor_Edit_Profile.class);
+
+                in.putExtra("drname",drname);
+                in.putExtra("category",category);
+                in.putExtra("endhr",endhr);
+                in.putExtra("starthr",starthr);
+                in.putExtra("phone",phone);
+                in.putExtra("basicfees",basicfees);
+                in.putExtra("imagepath",imagepath);
+                in.putExtra("exp",exp);
+                in.putExtra("service",service);
+                in.putExtra("key",key);
+
+                startActivity(in);
                 break;
 
             case R.id.nav_7:
