@@ -14,7 +14,8 @@
         android:layout_height="match_parent"
         tools:context=".splashscreen"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:background="#5DADE2 ">
 
         <TextView
             android:layout_width="match_parent"

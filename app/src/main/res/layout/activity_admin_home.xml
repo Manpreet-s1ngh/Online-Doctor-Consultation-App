@@ -23,8 +23,14 @@
         android:layout_height="100dp"
         android:orientation="horizontal"
         android:weightSum="1">
-        <Button
 
+
+
+
+
+
+
+        <Button
             android:textSize="18sp"
             android:onClick="go"
             android:id="@+id/bt2"
@@ -77,5 +83,6 @@
 
     </LinearLayout>
 
+>>>>>>> 9eb9a2fba5913a4a642385ad24c7e675ac35ce62
 
 </LinearLayout>
