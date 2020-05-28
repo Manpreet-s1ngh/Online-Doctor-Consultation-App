@@ -36,7 +36,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class Doctor_Edit_Profile extends AppCompatActivity {
-    EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10,etcategory;
+    EditText et1,  et5, et6, et7, et8, et9, et10,etcategory;
     StorageReference mainref2;
     DatabaseReference mainref_db;
     ProgressDialog progressDoalog;
@@ -101,28 +101,15 @@ public class Doctor_Edit_Profile extends AppCompatActivity {
        etcategory.setText(category);
 //        mainref_storage = firebaseStorage.getReference("/");
         mainref_db = firebaseDatabase.getReference("DoctorDetails");
-        imv1 = findViewById(R.id.imv1);
+        imv1 = findViewById(R.id.userimage);
         Picasso.get().load(imagepath).into(imv1);
     }
     // signup
     public void go3(View view) {
-        final String Fullname,   PhoneNo, BasicFees, Experience, Service, StartHour, EndHour;
 
-        Fullname = et1.getText().toString();
+        if(CameraBitmap == null && GalleryUri == null){
+            Toast.makeText(this, "Please select itemphoto photo", Toast.LENGTH_SHORT).show();
 
-        PhoneNo = et5.getText().toString();
-        BasicFees = et6.getText().toString();
-        Experience = et7.getText().toString();
-        Service = et8.getText().toString();
-        StartHour = et9.getText().toString();
-        EndHour = et10.getText().toString();
-        if (et1.getText().toString().trim().length() == 0) {
-            et1.setError("FullName is Required");
-            et1.requestFocus();
-        }
-         else if (et5.getText().toString().trim().length() == 0) {
-            et5.setError("Phone no is required");
-            et5.requestFocus();
 
         }
 
@@ -150,14 +137,8 @@ progressDoalog.show();
                                 String downloadpath = uri.toString();
 //                                String key = mainref_db.push().getKey();
 
-                                mainref_db.child(key).child("fullName").setValue(Fullname);
-                                mainref_db.child(key).child("endHour").setValue(EndHour);
-                                mainref_db.child(key).child("startHour").setValue(StartHour);
-                                mainref_db.child(key).child("service").setValue(Service);
-                                mainref_db.child(key).child("phoneNo").setValue(PhoneNo);
-                                mainref_db.child(key).child("basicFees").setValue(BasicFees);
+
                                 mainref_db.child(key).child("imagepath").setValue(downloadpath);
-                                mainref_db.child(key).child("experience").setValue(Experience);
 progressDoalog.dismiss();
                                 Toast.makeText(Doctor_Edit_Profile.this, "Profile Edited", Toast.LENGTH_SHORT).show();
                                 finish();
@@ -193,14 +174,9 @@ progressDoalog.dismiss();
                             public void onSuccess(Uri uri) {
                                 String downloadpath = uri.toString();
 //                                String key = mainref_db.push().getKey();
-                                mainref_db.child(key).child("fullName").setValue(Fullname);
-                                mainref_db.child(key).child("endHour").setValue(EndHour);
-                                mainref_db.child(key).child("startHour").setValue(StartHour);
-                                mainref_db.child(key).child("service").setValue(Service);
-                                mainref_db.child(key).child("phoneNo").setValue(PhoneNo);
-                                mainref_db.child(key).child("basicFees").setValue(BasicFees);
+
                                 mainref_db.child(key).child("imagepath").setValue(downloadpath);
-                                mainref_db.child(key).child("experience").setValue(Experience);
+
 progressDoalog.dismiss();
                                 Toast.makeText(Doctor_Edit_Profile.this, "Profile Edited", Toast.LENGTH_SHORT).show();
                                 finish();
@@ -290,4 +266,41 @@ progressDoalog.dismiss();
         return Uri.parse(path);
     }
 
+    public void  go_submit(View view) {
+        final String Fullname,  PhoneNo, BasicFees, Experience, Service, StartHour, EndHour;
+
+        Fullname = et1.getText().toString();
+
+        PhoneNo = et5.getText().toString();
+        BasicFees = et6.getText().toString();
+        Experience = et7.getText().toString();
+        Service = et8.getText().toString();
+        StartHour = et9.getText().toString();
+        EndHour = et10.getText().toString();
+        if (et1.getText().toString().trim().length() == 0) {
+            et1.setError("FullName is Required");
+            et1.requestFocus();
+        }  else if (et5.getText().toString().trim().length() == 0) {
+            et5.setError("Phone no is required");
+            et5.requestFocus();
+
+        }
+        else {
+            ////
+            progressDoalog.show();
+            mainref_db.child(key).child("fullName").setValue(Fullname);
+            mainref_db.child(key).child("endHour").setValue(EndHour);
+            mainref_db.child(key).child("startHour").setValue(StartHour);
+            mainref_db.child(key).child("service").setValue(Service);
+            mainref_db.child(key).child("phoneNo").setValue(PhoneNo);
+            mainref_db.child(key).child("basicFees").setValue(BasicFees);
+            mainref_db.child(key).child("experience").setValue(Experience);
+            progressDoalog.dismiss();
+            Toast.makeText(Doctor_Edit_Profile.this, "Profile Edited", Toast.LENGTH_SHORT).show();
+            finish();
+
+
+
+        }
+    }
 }
