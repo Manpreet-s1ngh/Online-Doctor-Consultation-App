@@ -6,7 +6,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DoctorSignupActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#5DADE2 ">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -109,6 +110,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/Bt1"
             android:text=" Camera"
+            android:textStyle="italic"
            android:layout_weight="1"
             android:onClick="go"/>
         <Button
@@ -116,6 +118,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/Bt2"
             android:text="Gallery"
+            android:textStyle="italic"
            android:layout_weight="1"
             android:onClick="go2"/>
     </LinearLayout>
@@ -124,6 +127,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Bt3"
+        android:textStyle="italic"
         android:text="SignUp"
         android:onClick="go3"/>
 

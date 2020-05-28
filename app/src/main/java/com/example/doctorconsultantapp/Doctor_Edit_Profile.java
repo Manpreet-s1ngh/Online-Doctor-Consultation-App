@@ -177,6 +177,8 @@ progressDoalog.dismiss();
 
 
             }
+
+
             else {
                 File localfile = new File(getRealPathFromURI(getImageUri(getApplicationContext(), CameraBitmap)));
 

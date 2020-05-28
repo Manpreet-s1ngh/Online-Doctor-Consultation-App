@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".singledoctordetail"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#27AE60">
 
         <ImageView
             android:id="@+id/imv111"
@@ -184,16 +185,17 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="#34495E"
             android:textSize="18dp"
             android:text="Book Appointment"
             android:layout_margin="40dp"
             android:id="@+id/bt1"
             android:onClick="go"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
+            android:textColor="#34495E"
             android:textSize="18dp"
             android:text="Rate the doctor"
             android:layout_margin="40dp"

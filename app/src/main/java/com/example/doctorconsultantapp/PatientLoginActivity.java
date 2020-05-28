@@ -96,7 +96,10 @@ public class PatientLoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void go2(View view) {
+    public void go2(View view)
+    {
+        Intent intent = new Intent(this,PatientForgetPasswordActivity.class);
+        startActivity(intent);
     }
 }
 

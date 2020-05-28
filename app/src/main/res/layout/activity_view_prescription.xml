@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewPrescriptionActivity">
+    tools:context=".ViewPrescriptionActivity"
+    android:background="#48C9B0" >
 
     <ListView
         android:layout_width="match_parent"

@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#85C1E9 "
     >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:text="Title"
+            android:textStyle="bold"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.184"
@@ -31,6 +33,7 @@
             android:layout_marginTop="50dp"
             android:text="Details"
             android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.184"
             app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +96,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="From Camera"
+                android:text="Camera"
+                android:textStyle="italic"
                 />
 
             <Button
@@ -101,7 +105,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="From gallery" />
+                android:text="Gallery"
+                android:textStyle="italic"/>
 
 
         </RadioGroup>
@@ -124,6 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="ADD"
+            android:textStyle="italic"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

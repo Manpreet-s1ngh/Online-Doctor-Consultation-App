@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddFrag">
+    tools:context=".AddFrag"
+    android:background="#37AF97">
 
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_height="wrap_content"
         android:text="Caption"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.227"
@@ -39,6 +41,7 @@
         android:layout_height="wrap_content"
         android:text="Photo"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.244"
@@ -61,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:text="ADD"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
@@ -74,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:text="From Gallery"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.072"
@@ -87,6 +92,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:text="From Camera"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
