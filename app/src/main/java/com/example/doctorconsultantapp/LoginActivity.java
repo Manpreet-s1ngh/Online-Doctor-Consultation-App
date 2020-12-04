@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -22,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class LoginActivity extends AppCompatActivity {
   FirebaseDatabase firebaseDatabase;
   DatabaseReference mainref;
-    TextInputEditText  et1, et2;
+    EditText  et1, et2;
    Button Bt1;
    int flag=0;
     @Override
@@ -57,6 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                     mainref.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            Log.d("mymsg",dataSnapshot.toString());
                             for (DataSnapshot Admin : dataSnapshot.getChildren()) {
                                 Login obj = Admin.getValue(Login.class);
                                 if (username.equals(obj.UserName) && pass.equals(obj.getPassword())) {

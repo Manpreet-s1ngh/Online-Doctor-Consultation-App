@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         tools:context=".singledoctordetail"
         android:orientation="vertical"
-        android:background="#27AE60">
+        >
 
         <ImageView
             android:id="@+id/imv111"
@@ -35,7 +35,6 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:src="@drawable/one"
-
                 android:layout_gravity="right"
                 android:layout_width="50dp"
                 android:layout_height="30dp" />
@@ -182,25 +181,40 @@
 
 
             />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#34495E"
-            android:textSize="18dp"
-            android:text="Book Appointment"
-            android:layout_margin="40dp"
-            android:id="@+id/bt1"
-            android:onClick="go"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#34495E"
-            android:textSize="18dp"
-            android:text="Rate the doctor"
-            android:layout_margin="40dp"
-            android:id="@+id/bt2"
-            android:onClick="go2"/>
 
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/gradient"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+            <Button
+                android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:text="Book Appointment"
+
+                android:id="@+id/bt1"
+                android:onClick="go"/>
+
+            <Button
+                android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="18dp"
+                android:text="Rate the doctor"
+                android:layout_margin="20dp"
+                android:id="@+id/bt2"
+                android:onClick="go2"/>
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

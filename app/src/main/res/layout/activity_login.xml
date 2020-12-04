@@ -32,14 +32,11 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="fill_parent"
-            android:theme="@style/TextLabel"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <EditText
+                android:layout_marginTop="20dp"
                 android:id="@+id/staffname"
+                android:layout_weight="1.0"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter user name"
@@ -50,16 +47,11 @@
                 android:textColorHint="#FFFFFF"
                 android:paddingLeft="7.0dip"
                 android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="fill_parent"
-            android:theme="@style/TextLabel"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1.0">
 
-            <com.google.android.material.textfield.TextInputEditText
+
+            <EditText
+                android:layout_marginTop="20dp"
                 android:id="@+id/staffpassword"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -71,7 +63,6 @@
                 android:textColorHint="#FFFFFF"
                 android:paddingLeft="7.0dip"
                 android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
 
         <LinearLayout

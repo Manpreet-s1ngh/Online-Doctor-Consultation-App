@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class PatientLoginActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference mainref;
-    TextInputEditText et1,et2;
+    EditText et1,et2;
     Button Bt1;
     int flag=0;
     @Override

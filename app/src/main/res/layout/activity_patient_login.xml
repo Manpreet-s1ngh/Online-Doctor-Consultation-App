@@ -32,47 +32,38 @@
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <EditText
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/staffname"
+            android:layout_weight="1.0"
             android:layout_width="fill_parent"
-            android:theme="@style/TextLabel"
             android:layout_height="wrap_content"
-            android:layout_weight="1.0">
+            android:hint="Enter user name"
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:maxLength="20"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:paddingLeft="7.0dip"
+            android:textSize="14sp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/staffname"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter user name"
-                android:imeOptions="actionNext"
-                android:inputType="textCapWords"
-                android:maxLength="20"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:paddingLeft="7.0dip"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+
+        <EditText
+            android:layout_weight="1.0"
+            android:layout_marginTop="20dp"
+            android:id="@+id/staffpassword"
             android:layout_width="fill_parent"
-            android:theme="@style/TextLabel"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1.0">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/staffpassword"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:hint="Password"
-                android:imeOptions="actionNext"
-                android:inputType="textPassword"
-                android:maxLength="20"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#FFFFFF"
-                android:paddingLeft="7.0dip"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
+            android:hint="Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:paddingLeft="7.0dip"
+            android:textSize="14sp" />
 
         <!--        <LinearLayout-->
         <!--            android:layout_width="match_parent"-->
