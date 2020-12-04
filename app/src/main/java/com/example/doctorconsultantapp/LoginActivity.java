@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,16 +22,18 @@ import com.google.firebase.database.ValueEventListener;
 public class LoginActivity extends AppCompatActivity {
   FirebaseDatabase firebaseDatabase;
   DatabaseReference mainref;
-   EditText et1;
-   EditText et2;
+    TextInputEditText  et1, et2;
    Button Bt1;
    int flag=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_login);
-        et1 = findViewById(R.id.et1);
-        et2 = findViewById(R.id.et2);
+        et1 = findViewById(R.id.staffname);
+        et2 = findViewById(R.id.staffpassword);
         Bt1 = findViewById(R.id.Bt1);
         firebaseDatabase = FirebaseDatabase.getInstance();
 

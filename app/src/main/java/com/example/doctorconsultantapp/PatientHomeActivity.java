@@ -165,8 +165,6 @@ public class PatientHomeActivity extends AppCompatActivity implements Navigation
             lv1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //open new activity and pass category name
-///                   mainref.orderbychild("category").equlato(categoryname)
                     Intent intent = new Intent(getApplicationContext(),ViewAllDoctorsActivity.class);
                      intent.putExtra("category",pd.Category);
                     startActivity(intent);

@@ -42,9 +42,11 @@ public class BookAppointmentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_appointment);
+        Toast.makeText(this, "RECEIVED>>>", Toast.LENGTH_SHORT).show();
         al1= new ArrayList<>();
-        SharedPreferences sharedPreference = getSharedPreferences("Doctor", MODE_PRIVATE);
-        did = sharedPreference.getString("Doctorid", "");
+        Intent in = getIntent();
+        did = in.getStringExtra("d_key");
+       Toast.makeText(this, "---$---->"+did, Toast.LENGTH_SHORT).show();
         FirebaseDatabase firebaseDatabase= FirebaseDatabase.getInstance();
         mainref = firebaseDatabase.getReference("DoctorSlots").child(did);
 
