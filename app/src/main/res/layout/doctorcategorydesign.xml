@@ -27,7 +27,7 @@
 
         android:textStyle="bold"
         android:textSize="21dp"
-        android:textColor="#F7DC6F"
+        android:textColor="#10100F"
         android:layout_gravity="center"
         android:gravity="center"
         android:id="@+id/tv1"/>

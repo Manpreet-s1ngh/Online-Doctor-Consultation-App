@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:background="#ffffff"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".singledoctordetail"
+        android:layout_height="wrap_content"
+
         android:orientation="vertical"
-        android:background="#27AE60">
+        android:layout_margin="20dp">
 
         <ImageView
             android:id="@+id/imv111"
@@ -28,6 +28,10 @@
             android:id="@+id/tv111"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -35,7 +39,6 @@
             android:layout_height="wrap_content">
             <ImageView
                 android:src="@drawable/one"
-
                 android:layout_gravity="right"
                 android:layout_width="50dp"
                 android:layout_height="30dp" />
@@ -53,6 +56,7 @@
                 />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -76,6 +80,7 @@
                 android:id="@+id/tv222"/>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -123,7 +128,6 @@
                 android:id="@+id/tv555"/>
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -147,6 +151,8 @@
                 android:id="@+id/tv666"/>
 
         </LinearLayout>
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
@@ -172,35 +178,52 @@
         </LinearLayout>
 
 
-
-
         <GridView
             android:id="@+id/gv1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:numColumns="3"
 
-
             />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+
         <Button
+            android:layout_weight="1"
+            android:background="@drawable/roundedbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#34495E"
+            android:textColor="#ffffff"
             android:textSize="18dp"
             android:text="Book Appointment"
-            android:layout_margin="40dp"
+            android:layout_margin="20dp"
             android:id="@+id/bt1"
             android:onClick="go"/>
 
         <Button
+            android:layout_weight="1"
+            android:background="@drawable/roundedbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#34495E"
+            android:textColor="#ffffff"
             android:textSize="18dp"
             android:text="Rate the doctor"
-            android:layout_margin="40dp"
+            android:layout_margin="20dp"
             android:id="@+id/bt2"
             android:onClick="go2"/>
 
+
     </LinearLayout>
-</ScrollView>
+
+
+
+</RelativeLayout>

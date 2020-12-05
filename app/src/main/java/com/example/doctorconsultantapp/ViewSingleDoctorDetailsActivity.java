@@ -66,7 +66,9 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
 
     public void go(View view)
     {
+
         Intent intent = new Intent(this,BookAppointmentActivity.class);
+        intent.putExtra("d_key",d_key);
         startActivity(intent);
 
     }

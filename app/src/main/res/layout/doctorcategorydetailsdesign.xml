@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     app:cardBackgroundColor="#ffffff"
     android:layout_margin="5dp"
     android:id="@+id/cardview1"
-    android:layout_marginTop="5dp"
-
+    android:layout_width="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    app:cardElevation="10dp"
     app:cardCornerRadius="10dp"
-    app:cardElevation="20dp"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
         android:orientation="horizontal"
         android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#A9CCE3">
+       >
 
         <LinearLayout
             android:layout_weight="1"
@@ -44,19 +45,20 @@
                 android:textColor="#9C27B0"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="10dp"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:text=""
+
                 android:id="@+id/tv111"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
                 android:textColor="#F44336"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="10dp"
-                android:textSize="12sp"
+                android:textSize="18sp"
                 android:text=""
                 android:id="@+id/tv222"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
                 android:textColor="#F44336"
@@ -74,7 +76,7 @@
                 android:textSize="12sp"
                 android:text=""
                 android:id="@+id/tv444"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
                 android:textColor="#F44336"
@@ -83,12 +85,16 @@
                 android:textSize="12sp"
                 android:text=""
                 android:id="@+id/tv555"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
                 android:layout_height="match_parent"
                 android:text="View details"
+                android:textStyle="bold"
+                android:background="@drawable/roundedbutton"
                 android:id="@+id/bt1"
                 android:layout_marginBottom="20dp"/>
         </LinearLayout>
