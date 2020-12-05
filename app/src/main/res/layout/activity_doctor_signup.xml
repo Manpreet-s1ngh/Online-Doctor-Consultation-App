@@ -36,7 +36,7 @@
     <EditText
         android:id="@+id/et1"
         android:inputType="text"
-        android:hint="Enter confirm password"
+        android:hint="Enter Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -185,6 +185,7 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <Button
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Bt1"
@@ -195,6 +196,7 @@
             android:background="@drawable/roundedbutton"
             android:onClick="go"/>
         <Button
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Bt2"
@@ -207,6 +209,7 @@
     </LinearLayout>
 
     <Button
+        android:layout_marginTop="20dp"
         android:background="@drawable/roundedbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
