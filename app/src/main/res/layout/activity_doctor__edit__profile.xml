@@ -5,7 +5,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#3498DB"
     tools:context=".Doctor_Edit_Profile"
     android:orientation="vertical">
 
@@ -149,6 +148,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Bt3"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
 
             android:text="Submit"
             android:onClick="go_submit"/>

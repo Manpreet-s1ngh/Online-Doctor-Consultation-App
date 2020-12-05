@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ManageScheduleActivity"
-    android:orientation="vertical"
-    android:background="#D6DBDF">
+    android:orientation="vertical">
 
 
 

@@ -15,13 +15,14 @@
         tools:context=".splashscreen"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="#5DADE2 ">
+        android:background="@drawable/gradienttwo">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="WELCOME "
             android:textStyle="bold"
+            android:textColor="@color/white"
             android:id="@+id/tv1"
             android:textSize="40sp"
             android:gravity="center"
@@ -37,7 +38,7 @@
 
     </LinearLayout>
     <TextView
-
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Designed and Developed by \n Yoginder Singh "

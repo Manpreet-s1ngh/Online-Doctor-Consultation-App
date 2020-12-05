@@ -42,7 +42,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
     DatabaseReference doctorref , patientref,BookingRef;
     String problem;
     String Date;
-
+    int fees=1;
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +127,8 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
                    tv333.setText(Doctorphn);
                 tv666.setText(category);
                 tv777.setText(Day);
+                fees=Integer.parseInt(obj.getBasicFees());
+                tv888.setText("Fees :- "+obj.getBasicFees());
                 tv999.setText(Start);
                 tv1000.setText(End);
 
@@ -177,7 +179,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
         final Checkout co = new Checkout();
 
         try {
-            int fees=Integer.parseInt("500");
+
             fees=fees*100;
 //            basicfees=fees+"";
 

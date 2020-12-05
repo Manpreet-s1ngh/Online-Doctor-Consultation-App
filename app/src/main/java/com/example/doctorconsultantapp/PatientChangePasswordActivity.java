@@ -27,11 +27,11 @@ public class PatientChangePasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_change_password);
 
-        etusername= findViewById(R.id.et1);
-        etoldpassword= findViewById(R.id.et2);
-        etnewpassword = findViewById(R.id.et3);
-        etconfirmpassword = findViewById(R.id.et4);
-        Bt1 = findViewById(R.id.Bt1);
+        etusername= findViewById(R.id.etadminchangepassword_username);
+        etoldpassword= findViewById(R.id.etadminchangepassword_oldpassword);
+        etnewpassword = findViewById(R.id.etadminchangepassword_newpassword);
+        etconfirmpassword = findViewById(R.id.etadminchangepassword_confirmpassword);
+        Bt1 = findViewById(R.id.bt3);
 
         SharedPreferences sharedPreference=getSharedPreferences("Patient",MODE_PRIVATE);
         did = sharedPreference.getString("Patient_Key","");
