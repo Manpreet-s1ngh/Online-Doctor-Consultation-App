@@ -57,7 +57,7 @@ public class DoctorHomeActivity extends AppCompatActivity implements NavigationV
         tv4= findViewById(R.id.tv4);
         SharedPreferences sharedPreference=getSharedPreferences("Doctor",MODE_PRIVATE);
         did = sharedPreference.getString("Doctorid","");
-        Toast.makeText(this, ""+did, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, ""+did, Toast.LENGTH_SHORT).show();
 
 
         firebaseDatabase = FirebaseDatabase.getInstance();

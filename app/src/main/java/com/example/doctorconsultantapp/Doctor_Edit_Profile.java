@@ -139,7 +139,7 @@ progressDoalog.show();
 
 
                                 mainref_db.child(key).child("imagepath").setValue(downloadpath);
-progressDoalog.dismiss();
+                                 progressDoalog.dismiss();
                                 Toast.makeText(Doctor_Edit_Profile.this, "Profile Edited", Toast.LENGTH_SHORT).show();
                                 finish();
 

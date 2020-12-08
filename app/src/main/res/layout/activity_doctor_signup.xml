@@ -7,7 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DoctorSignupActivity"
     android:orientation="vertical"
-    android:background="#5DADE2 ">
+    android:background="#ffffff">
 
 <LinearLayout
     android:layout_width="match_parent"
@@ -20,14 +20,23 @@
         android:layout_marginTop="30dp"
         android:text="Doctor Signup"
         android:textSize="30sp"/>
+  <com.google.android.material.textfield.TextInputLayout
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="20dp"
+      android:layout_marginTop="10dp"
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:id="@+id/et1"
-        android:inputType="text"
-        android:hint="Full Name"/>
+      android:hint="Full Name"
+      >
+       <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/et1"
+          android:inputType="text"
+          />
+  </com.google.android.material.textfield.TextInputLayout>
+
 
 
     <EditText

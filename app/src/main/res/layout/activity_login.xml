@@ -34,6 +34,8 @@
 
 
             <EditText
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="5dp"
                 android:layout_marginTop="20dp"
                 android:id="@+id/staffname"
                 android:layout_weight="1.0"
@@ -46,11 +48,14 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:paddingLeft="7.0dip"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:focusedByDefault="true"/>
 
 
 
             <EditText
+                android:drawableStart="@drawable/ic_key"
+                android:drawablePadding="5dp"
                 android:layout_marginTop="20dp"
                 android:id="@+id/staffpassword"
                 android:layout_width="fill_parent"
@@ -62,7 +67,8 @@
                 android:textColor="#FFFFFF"
                 android:textColorHint="#FFFFFF"
                 android:paddingLeft="7.0dip"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                />
 
 
         <LinearLayout

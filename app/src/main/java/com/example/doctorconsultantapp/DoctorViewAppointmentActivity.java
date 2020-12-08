@@ -36,8 +36,11 @@ public class DoctorViewAppointmentActivity extends AppCompatActivity {
         lv1.setAdapter(ad);
         SharedPreferences sharedPreference=getSharedPreferences("Doctor",MODE_PRIVATE);
         String   d_key = sharedPreference.getString("Doctorid","");
+
         Toast.makeText(this, ""+d_key, Toast.LENGTH_SHORT).show();
         Log.d("doctorkey",d_key);
+
+
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         mainref= firebaseDatabase.getReference("BookingDetails");
         mainref.orderByChild("doctorId").equalTo(d_key).addValueEventListener(new ValueEventListener() {

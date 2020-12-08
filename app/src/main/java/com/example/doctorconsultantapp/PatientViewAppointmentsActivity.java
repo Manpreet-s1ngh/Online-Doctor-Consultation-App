@@ -46,6 +46,7 @@ public class PatientViewAppointmentsActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 al.clear();
                 Log.d("snap", dataSnapshot.toString());
+
                 if(dataSnapshot.exists()){
                     for (DataSnapshot sin : dataSnapshot.getChildren()){
                         Booking obj = sin.getValue(Booking.class);

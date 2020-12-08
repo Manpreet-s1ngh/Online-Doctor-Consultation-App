@@ -1,4 +1,4 @@
-package com.example.doctorconsultantapp;
+  package com.example.doctorconsultantapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -182,6 +182,8 @@ public class DoctorSignupActivity extends AppCompatActivity {
 
 
             }
+
+
             else {
                 File localfile = new File(getRealPathFromURI(getImageUri(getApplicationContext(), CameraBitmap)));
 
