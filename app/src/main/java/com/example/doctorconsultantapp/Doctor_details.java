@@ -1,5 +1,7 @@
 package com.example.doctorconsultantapp;
 
+import android.graphics.Insets;
+
 public class Doctor_details
 {
      String  FullName;
@@ -15,13 +17,14 @@ public class Doctor_details
      String imagepath;
      String d_key;
      String status;
+     String address ="";
 
    public Doctor_details()
     {
 
     }
 
-    public Doctor_details(String fullName, String email, String password, String category, String phoneNo, String basicFees, String experience, String service, String startHour, String endHour, String imagepath, String d_key, String status) {
+    public Doctor_details(String fullName, String email, String password, String category, String phoneNo, String basicFees, String experience, String service, String startHour, String endHour, String imagepath, String d_key, String status,String address) {
         FullName = fullName;
         Email = email;
         Password = password;
@@ -35,6 +38,7 @@ public class Doctor_details
         this.imagepath = imagepath;
         this.d_key = d_key;
         this.status = status;
+        this.address = address;
     }
 
     public String getFullName() {
@@ -139,5 +143,13 @@ public class Doctor_details
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

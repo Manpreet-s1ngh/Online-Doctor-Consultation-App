@@ -13,12 +13,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PatientForgetPasswordActivity"></activity>
+        <activity android:name=".Call_options"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
+        <activity android:name=".PatientForgetPasswordActivity" />
         <activity android:name=".Doctor_Edit_Profile" />
         <activity android:name=".Doctor_Forget_Password" />
         <activity android:name=".ManageDoctorActivity" />
         <activity android:name=".AdminChangePasswordActivity" />
-
         <activity android:name=".MainActivity" />
         <activity android:name=".PatientChangePasswordActivity" />
         <activity android:name=".DoctorChangePasswordActivity" />

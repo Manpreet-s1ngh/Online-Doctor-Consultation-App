@@ -31,7 +31,7 @@
                 android:layout_height="100dp"
                 android:layout_margin="10dp"
                 android:layout_weight="0.8"
-                android:src="@drawable/one" />
+                android:src="@drawable/star" />
         </LinearLayout>
         <LinearLayout
             android:layout_weight="1"

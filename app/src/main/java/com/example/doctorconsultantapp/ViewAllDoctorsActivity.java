@@ -124,6 +124,7 @@ public class ViewAllDoctorsActivity extends AppCompatActivity {
                     intent.putExtra("email",dd.getEmail());
                     intent.putExtra("image",dd.getImagepath());
                     intent.putExtra("BasicFees",dd.getBasicFees());
+                    intent.putExtra("address",dd.getAddress());
 
 
 

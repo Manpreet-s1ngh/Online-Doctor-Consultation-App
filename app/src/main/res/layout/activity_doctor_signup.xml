@@ -15,99 +15,184 @@
     android:orientation="vertical">
 
     <TextView
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text=" Doctor Signup"
+        android:textStyle="bold"
+        android:fontFamily="@font/avenir_ltstd_heavy"
+        android:id="@+id/tvcustomer_home"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@color/material_gray_900"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/material_green_700"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/et1"
+        android:inputType="text"
+        android:hint="Enter Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="Doctor Signup"
-        android:textSize="30sp"/>
-  <com.google.android.material.textfield.TextInputLayout
-      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginHorizontal="20dp"
-      android:layout_marginTop="10dp"
-
-      android:hint="Full Name"
-      >
-       <com.google.android.material.textfield.TextInputEditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:id="@+id/et1"
-          android:inputType="text"
-          />
-  </com.google.android.material.textfield.TextInputLayout>
-
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
+        />
+>>>>>>> 5d8aa8a0959c9a4a2a2d5bdf447c03963239e3bf
 
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+
         android:id="@+id/et2"
         android:inputType="textEmailAddress"
-        android:hint="Email ID"/>
+        android:hint="Email ID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
+
+        />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:id="@+id/et3"
         android:inputType="textPassword"
-        android:hint="Password"/>
-    <EditText
+        android:hint="Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
+        />
+    <EditText
         android:id="@+id/et4"
         android:inputType="textPassword"
-        android:hint="Confirm Password"/>
+        android:hint="Confirm Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
+       />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
         android:id="@+id/et5"
         android:inputType="number"
         android:hint="Phone No"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
         android:id="@+id/et6"
         android:inputType="number"
         android:hint="Basic Fees"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
         android:id="@+id/et7"
         android:hint="Experience"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
         android:id="@+id/et8"
         android:hint="Service"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
         android:id="@+id/et9"
         android:inputType="time"
         android:hint="Start Hour"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
         android:id="@+id/et10"
         android:inputType="time"
         android:hint="End Hour"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/avenir_ltstd_medium"
+        android:gravity="center_horizontal"
+        android:id="@+id/et_address"
+        android:inputType="time"
+        android:hint="Address"/>
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sp1"/>
    <ImageView
-       android:layout_width="match_parent"
-       android:layout_height="350dp"
+       android:layout_gravity="center"
+       android:layout_width="250dp"
+       android:layout_height="250dp"
        android:id="@+id/imv1"/>
     <LinearLayout
         android:weightSum="2"
@@ -115,27 +200,36 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <Button
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Bt1"
             android:text=" Camera"
+            android:textColor="@color/white"
             android:textStyle="italic"
            android:layout_weight="1"
+            android:background="@drawable/roundedbutton"
             android:onClick="go"/>
         <Button
+            android:layout_margin="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/Bt2"
             android:text="Gallery"
+            android:background="@drawable/roundedbutton"
             android:textStyle="italic"
            android:layout_weight="1"
+            android:textColor="@color/white"
             android:onClick="go2"/>
     </LinearLayout>
 
     <Button
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Bt3"
+        android:textColor="@color/white"
         android:textStyle="italic"
         android:text="SignUp"
         android:onClick="go3"/>

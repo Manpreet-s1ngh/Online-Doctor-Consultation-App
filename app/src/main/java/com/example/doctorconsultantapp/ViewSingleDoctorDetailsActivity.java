@@ -7,16 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
 public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
-   TextView tv111,tv222,tv333,tv444,tv555,tv666,tv777;
+   TextView tv111,tv222,tv333,tv444,tv555,tv666,tv777,tvaddress;
    ImageView imv111;
    Button  bt1,bt2;
     String d_key;
+    LinearLayout lay_address;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +32,8 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
         tv555= findViewById(R.id.tv555);
         tv666= findViewById(R.id.tv666);
         tv777= findViewById(R.id.tv777);
+        tvaddress= findViewById(R.id.tvaddress);
+        lay_address= findViewById(R.id.lay_address);
         imv111= findViewById(R.id.imv111);
         bt1= findViewById(R.id.bt1);
         bt2= findViewById(R.id.bt2);
@@ -50,6 +54,7 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
         String email = incomingintent.getStringExtra("email");
         String image = incomingintent.getStringExtra("image");
         String BasicFees= incomingintent.getStringExtra("BasicFees");
+        String address= incomingintent.getStringExtra("address");
 
         Picasso.get().load(image).into(imv111);
         tv111.setText(fullName);
@@ -59,6 +64,12 @@ public class ViewSingleDoctorDetailsActivity extends AppCompatActivity {
         tv555.setText(BasicFees);
         tv666.setText("Start:-"+start+" "+"End :- "+end);
         tv777.setText(email);
+        if(address.equals("")){
+            lay_address.setVisibility(View.GONE);
+        }
+        else {
+            tvaddress.setText(address);
+        }
 
 
 

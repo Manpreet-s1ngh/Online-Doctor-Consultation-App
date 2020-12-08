@@ -36,7 +36,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class DoctorSignupActivity extends AppCompatActivity {
-    EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10;
+    EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10,et_address;
     StorageReference mainref2;
     DatabaseReference mainref_db;
 
@@ -68,6 +68,8 @@ public class DoctorSignupActivity extends AppCompatActivity {
         et8 = findViewById(R.id.et8);
         et9 = findViewById(R.id.et9);
         et10 = findViewById(R.id.et10);
+        et_address = findViewById(R.id.et_address);
+
 
 //        FirebaseStorage firebaseStorage = FirebaseStorage.getInstance();
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
@@ -111,7 +113,9 @@ public class DoctorSignupActivity extends AppCompatActivity {
 
     // signup
     public void go3(View view) {
-        final String Fullname, Email, Password, ConfirmPassword, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour;
+        final String Fullname, Email, Password,
+                ConfirmPassword, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour
+                ,address;
 
         Fullname = et1.getText().toString();
         Email = et2.getText().toString();
@@ -123,6 +127,7 @@ public class DoctorSignupActivity extends AppCompatActivity {
         Service = et8.getText().toString();
         StartHour = et9.getText().toString();
         EndHour = et10.getText().toString();
+        address = et_address.getText().toString();
         if (et1.getText().toString().trim().length() == 0) {
             et1.setError("FullName is Required");
             et1.requestFocus();
@@ -163,7 +168,7 @@ public class DoctorSignupActivity extends AppCompatActivity {
                                 String downloadpath = uri.toString();
                                 String key = mainref_db.push().getKey();
 
-                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending");
+                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending",address);
                                 mainref_db.child(key).setValue(obj);
                                 finish();
 
@@ -201,7 +206,7 @@ public class DoctorSignupActivity extends AppCompatActivity {
                                 String downloadpath = uri.toString();
                                 String key = mainref_db.push().getKey();
 
-                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending");
+                                Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending",address);
                                 mainref_db.child(key).setValue(obj);
                                 finish();
 

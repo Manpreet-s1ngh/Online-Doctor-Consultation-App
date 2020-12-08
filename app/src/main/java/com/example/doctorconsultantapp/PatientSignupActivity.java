@@ -105,7 +105,6 @@ public class PatientSignupActivity extends AppCompatActivity {
                 imv1.setImageBitmap(CameraBitmap);
 
             }
-
         } else if (requestCode == 20) //from gallery
         {
             if (resultCode == RESULT_OK) {
@@ -156,7 +155,16 @@ public class PatientSignupActivity extends AppCompatActivity {
             et5.setError("Phone no is required");
             et5.requestFocus();
 
-        } else {
+        }
+        else if(CameraBitmap == null || GalleryUri == null){
+            String key = mainref_db.push().getKey();
+String downloadpath ="https://firebasestorage.googleapis.com/v0/b/doctor-app-firebase.appspot.com/o/boy.png?alt=media&token=0751d5fc-5f14-4f49-be50-217f8830b44c";
+            PatientDetails obj = new PatientDetails(Fullname, Email, Password, PhoneNo, downloadpath, key);
+            mainref_db.child(key).setValue(obj);
+            Toast.makeText(this, "Signup Success", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        else {
 //
 //
             if (type.equals("gallery")) {
@@ -216,7 +224,6 @@ public class PatientSignupActivity extends AppCompatActivity {
 
                                 PatientDetails obj = new PatientDetails(Fullname, Email, Password, PhoneNo, downloadpath, key);
                                 mainref_db.child(key).setValue(obj);
-                                finish();
                                 finish();
 
 

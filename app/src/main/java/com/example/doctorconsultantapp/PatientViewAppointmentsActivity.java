@@ -2,7 +2,9 @@ package com.example.doctorconsultantapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -94,7 +96,7 @@ public class PatientViewAppointmentsActivity extends AppCompatActivity {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             convertView = inflater.inflate(R.layout.singlerowdesign7,parent,false);
 
-           Booking bk= al.get(position);
+           final Booking bk= al.get(position);
           //  TextView tv11,tv22,tv33,tv44,tv55,tv66;
             //tv11 = convertView.findViewById(R.id.tv11);
            // tv22 = convertView.findViewById(R.id.tv22);
@@ -109,6 +111,8 @@ public class PatientViewAppointmentsActivity extends AppCompatActivity {
           //  tv44.setText(bk.SlotDay);
           //  tv55.setText(bk.Start);
           //  tv66.setText(bk.End);
+
+            CardView cardview1=convertView.findViewById(R.id.cardview1);
             TextView pid=convertView.findViewById(R.id.tvpid);
             TextView probid=convertView.findViewById(R.id.tvprobid);
             TextView abc=convertView.findViewById(R.id.tvpatientname);
@@ -124,6 +128,14 @@ public class PatientViewAppointmentsActivity extends AppCompatActivity {
             from.setText(bk.Start);
             to.setText(bk.End);
             pid.setText(bk.getPhoneNo());
+            cardview1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getApplicationContext(),Call_options.class);
+                    intent.putExtra("mobile",bk.getPhoneNo());
+                    startActivity(intent);
+                }
+            });
 
 
             return convertView;

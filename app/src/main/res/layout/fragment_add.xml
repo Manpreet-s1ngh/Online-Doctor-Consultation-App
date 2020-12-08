@@ -1,69 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:layout_height="match_parent"
-    tools:context=".AddFrag"
-    android:background="#37AF97">
+    tools:context=".AddFrag">
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caption"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.227"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.193" />
+
+        <EditText
+            android:layout_weight="1"
+            android:id="@+id/etcaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="caption"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.574"
+            app:layout_constraintStart_toEndOf="@+id/tv1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.179" />
+
+    </LinearLayout>
+
+
+
+
 
 
     <TextView
-        android:id="@+id/tv1"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
         android:layout_height="wrap_content"
-        android:text="Caption"
-        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:text="PHOTO"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.193" />
-
-    <EditText
-        android:id="@+id/etcaption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="caption"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.574"
-        app:layout_constraintStart_toEndOf="@+id/tv1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
-
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Photo"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.244"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv1"
-        app:layout_constraintVertical_bias="0.084" />
-
+        android:fontFamily="@font/avenir_ltstd_heavy"
+        android:id="@+id/tvcustomer_home"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:textColor="@color/material_gray_900"/>
     <ImageView
         android:id="@+id/imv1"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv3"
         app:layout_constraintVertical_bias="0.137" />
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
 
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="35dp"
+            android:text="From Gallery"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.072"
+            app:layout_constraintStart_toEndOf="@+id/Bt111"
+            app:layout_constraintTop_toBottomOf="@+id/imv1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:background="@drawable/roundedbutton"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/Bt333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="35dp"
+            android:text="From Camera"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintStart_toEndOf="@+id/button6"
+            app:layout_constraintTop_toBottomOf="@+id/imv1"
+            app:layout_constraintVertical_bias="0.0" />
+    </LinearLayout>
     <Button
         android:id="@+id/Bt111"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="ADD"
+       android:background="@drawable/roundedbutton"
+        android:textColor="@color/white"
+        android:text="Submit"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,32 +127,6 @@
         app:layout_constraintTop_toBottomOf="@+id/imv1"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="From Gallery"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toEndOf="@+id/Bt111"
-        app:layout_constraintTop_toBottomOf="@+id/imv1"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/Bt333"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
-        android:text="From Camera"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toEndOf="@+id/button6"
-        app:layout_constraintTop_toBottomOf="@+id/imv1"
-        app:layout_constraintVertical_bias="0.0" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

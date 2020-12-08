@@ -2,7 +2,9 @@ package com.example.doctorconsultantapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -93,7 +95,7 @@ public class DoctorViewAppointmentActivity extends AppCompatActivity {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
             convertView = inflater.inflate(R.layout.singlerowdesign6, parent, false);
 
-            Booking bk = al.get(position);
+            final Booking bk = al.get(position);
 //            TextView tv11, tv22, tv33, tv44, tv55, tv66;
 //            tv11 = convertView.findViewById(R.id.tv11);
 //            tv22 = convertView.findViewById(R.id.tv22);
@@ -114,7 +116,7 @@ public class DoctorViewAppointmentActivity extends AppCompatActivity {
             TextView day=convertView.findViewById(R.id.tvday);
             TextView from=convertView.findViewById(R.id.tvfrom);
             TextView to=convertView.findViewById(R.id.tvto);
-
+            CardView cardview1=convertView.findViewById(R.id.cardview1);
             abc.setText(bk.P_Name);
             date.setText(bk.getDate());
             probid.setText(bk.Problem);
@@ -122,11 +124,19 @@ public class DoctorViewAppointmentActivity extends AppCompatActivity {
             from.setText(bk.Start);
             to.setText(bk.End);
             pid.setText(bk.getP_Mobile());
+            cardview1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(getApplicationContext(),Call_options.class);
+                    intent.putExtra("mobile",bk.getP_Mobile());
+                    startActivity(intent);
+                }
+            });
+
 
 
             return convertView;
 
         }
-    } {
     }
 }

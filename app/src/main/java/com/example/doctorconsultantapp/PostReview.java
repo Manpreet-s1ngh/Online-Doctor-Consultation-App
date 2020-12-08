@@ -123,6 +123,7 @@ String dkey;
                     ReviewDetails obj = new ReviewDetails(pushkey,pkey,dkey,ratedValue+"",comment,date,d.getTime());
                     maianref.child(pushkey).setValue(obj);
                     Toast.makeText(getActivity(), "Review Added..", Toast.LENGTH_SHORT).show();
+                    getActivity().finish();
 
                 }
 

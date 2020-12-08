@@ -7,52 +7,102 @@
     tools:context=".ConfirmAppointmentActivity"
     >
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
         android:layout_height="match_parent">
-
         <TextView
-            android:id="@+id/tv1"
-            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
             android:text="CONFIRM APPOINTMENT"
-            android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.062" />
+            android:fontFamily="@font/avenir_ltstd_heavy"
+            android:id="@+id/tvcustomer_home"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:textColor="@color/material_gray_900"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/material_green_700"
+            android:layout_marginBottom="10dp"
 
-        <TextView
-            android:id="@+id/tv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left"
-            android:layout_marginTop="56dp"
-            android:text="Doctor's Name"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+            android:layout_gravity="center"/>
 
-        <TextView
-            android:id="@+id/tv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Doctor's Number"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
 
+                android:text="Doctor's Name"
+                android:textSize="24sp"
+               />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv222"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv2"
+                app:layout_constraintTop_toBottomOf="@+id/tv1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Doctor's Number"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv2" />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv3"
+                app:layout_constraintTop_toBottomOf="@+id/tv222"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
         <TextView
+
+            android:layout_weight="1"
             android:id="@+id/tv4"
-            android:layout_width="166dp"
-            android:layout_height="26dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="Patient's Name"
             android:textSize="24sp"
@@ -61,95 +111,260 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv3" />
 
-        <TextView
-            android:id="@+id/tv5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Patient's Number"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv4" />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv444"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/tv4"
+                app:layout_constraintTop_toBottomOf="@+id/tv333" />
 
-        <TextView
-            android:id="@+id/tv6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Category"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv5" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Day"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv6" />
-
-        <TextView
-            android:id="@+id/tv8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Date"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv7" />
-
-        <EditText
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
             android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Patient's Number"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv555"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.377"
+                app:layout_constraintStart_toEndOf="@+id/tv5"
+                app:layout_constraintTop_toBottomOf="@+id/tv444" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Category"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.709"
+                app:layout_constraintStart_toEndOf="@+id/tv6"
+                app:layout_constraintTop_toBottomOf="@+id/tv555" />
+
+        </LinearLayout>
+        <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Day"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv6" />
+
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.709"
+                app:layout_constraintStart_toEndOf="@+id/tv7"
+                app:layout_constraintTop_toBottomOf="@+id/tv666" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Date"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv7" />
+
+            <EditText
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/et1"
+                android:layout_marginTop="5dp"
+                android:hint="Select date"
+                android:textSize="24sp"
+                android:focusable="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv8"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Time From"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et1" />
+
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv999"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginRight="84dp"
+                android:hint=""
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/tv10"
+                app:layout_constraintTop_toBottomOf="@+id/tv888" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.043"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv10" />
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/tv1000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint=""
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.72"
+                app:layout_constraintStart_toEndOf="@+id/tv11"
+                app:layout_constraintTop_toBottomOf="@+id/tv999" />
+
+        </LinearLayout>
+
+
+        <TextView
+
+            android:id="@+id/tv888"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/et1"
             android:layout_marginTop="5dp"
-            android:hint="Select date"
+            android:hint=""
             android:textSize="24sp"
-            android:focusable="false"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv8"/>
+            app:layout_constraintHorizontal_bias="0.709"
+            app:layout_constraintStart_toEndOf="@+id/tv8"
+            app:layout_constraintTop_toBottomOf="@+id/tv777" />
 
 
-        <TextView
-            android:id="@+id/tv10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Time From"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et1" />
 
-        <TextView
-            android:id="@+id/tv11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="To"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.043"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv10" />
+
+
+
 
         <TextView
             android:id="@+id/tv12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="24dp"
             android:text="Problem"
             android:textStyle="bold"
             android:textSize="29sp"
@@ -171,8 +386,12 @@
             app:layout_constraintTop_toBottomOf="@+id/tv12" />
 
         <Button
+            android:background="@drawable/roundedbutton"
             android:id="@+id/Bt1"
-            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:text="ConfirmAppointment"
@@ -184,115 +403,19 @@
             app:layout_constraintTop_toBottomOf="@+id/et2"
             app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/tv222"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv2"
-            app:layout_constraintTop_toBottomOf="@+id/tv1" />
-        <TextView
-            android:id="@+id/tv333"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tv3"
-            app:layout_constraintTop_toBottomOf="@+id/tv222"
-            />
-
-        <TextView
-            android:id="@+id/tv444"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.377"
-            app:layout_constraintStart_toEndOf="@+id/tv4"
-            app:layout_constraintTop_toBottomOf="@+id/tv333" />
-
-        <TextView
-            android:id="@+id/tv555"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.377"
-            app:layout_constraintStart_toEndOf="@+id/tv5"
-            app:layout_constraintTop_toBottomOf="@+id/tv444" />
-
-        <TextView
-            android:id="@+id/tv666"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.709"
-            app:layout_constraintStart_toEndOf="@+id/tv6"
-            app:layout_constraintTop_toBottomOf="@+id/tv555" />
-
-        <TextView
-            android:id="@+id/tv777"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.709"
-            app:layout_constraintStart_toEndOf="@+id/tv7"
-            app:layout_constraintTop_toBottomOf="@+id/tv666" />
 
 
-        <TextView
-            android:id="@+id/tv888"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.709"
-            app:layout_constraintStart_toEndOf="@+id/tv8"
-            app:layout_constraintTop_toBottomOf="@+id/tv777" />
 
-        <TextView
-            android:id="@+id/tv999"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:layout_marginEnd="84dp"
-            android:layout_marginRight="84dp"
-            android:hint=""
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/tv10"
-            app:layout_constraintTop_toBottomOf="@+id/tv888" />
 
-        <TextView
-            android:id="@+id/tv1000"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:hint=""
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.72"
-            app:layout_constraintStart_toEndOf="@+id/tv11"
-            app:layout_constraintTop_toBottomOf="@+id/tv999" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+    </LinearLayout>
 
 
 </ScrollView>
