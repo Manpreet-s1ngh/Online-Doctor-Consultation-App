@@ -1,35 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminHome"
+
     android:orientation="vertical"
-    android:gravity="center"
-    >
+    tools:context=".AdminHome">
+
+    <ImageView
+        android:layout_width="match_parent"
+
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp" 
+
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/aaa"></ImageView>
 
     <TextView
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text=" Admin Home"
-        android:textStyle="bold"
-        android:fontFamily="@font/avenir_ltstd_heavy"
         android:id="@+id/tvcustomer_home"
-        android:textSize="35sp"
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/avenir_ltstd_heavy"
         android:gravity="center"
-        android:textColor="@color/material_gray_900"/>
+        android:text=" Admin Home"
+        android:textColor="@color/material_gray_900"
+
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/material_green_700"
-        android:layout_marginBottom="50dp"
+        android:layout_gravity="center"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
-        android:layout_gravity="center"/>
+        android:layout_marginBottom="50dp"
+        android:background="@color/material_green_700" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,55 +46,57 @@
         android:weightSum="1">
 
         <Button
-            android:textSize="18sp"
-            android:onClick="go"
             android:id="@+id/bt2"
-            android:text=" CHANGE PASSWORD"
-            android:textColor="#ffffff"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="0.5"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:background="@drawable/button_style_selector"
+            android:onClick="go"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-            android:background="@drawable/button_style_selector"/>
+            android:text=" CHANGE PASSWORD"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
         <Button
-            android:textSize="18sp"
-            android:onClick="go2"
             android:id="@+id/bt3"
-            android:text=" MANAGE Doctors"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="10dp"
-            android:textColor="#ffffff"
-            android:layout_width="0dp"
             android:layout_weight="0.5"
-            android:layout_height="match_parent"
+            android:background="@drawable/button_style_selector"
+            android:onClick="go2"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-            android:background="@drawable/button_style_selector"/>
+            android:text=" MANAGE Doctors"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:layout_marginTop="15dp"
         android:orientation="horizontal"
-        android:weightSum="1"
-        android:layout_marginTop="15dp">
+        android:gravity="center_horizontal"
+        android:weightSum="1">
+
         <Button
-            android:textSize="18sp"
             android:id="@+id/bt1"
-            android:text=" Logout"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:textColor="#ffffff"
             android:layout_weight="0.5"
+            android:background="@drawable/button_style_selector"
             android:paddingStart="5dp"
             android:paddingEnd="5dp"
-            android:background="@drawable/button_style_selector"
-            />
+            android:text=" Logout"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </LinearLayout>

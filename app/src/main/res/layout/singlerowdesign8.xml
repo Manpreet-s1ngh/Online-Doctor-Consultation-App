@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_margin="5dp"
+    android:id="@+id/cardview1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_marginTop="10dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginHorizontal="8dp"
+
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:background="#B7F3F3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/pid"
+                    style="@style/heading"
+                    android:text="Patient Phone : "/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvpid"
+                    android:paddingLeft="7dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14dp"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/patname"
+                    style="@style/heading"
+                    android:text="Patient Name  : "/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="7dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14dp"
+
+                    android:id="@+id/tvpatientname"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/date"
+                    android:text="Date   : "
+
+                    style="@style/heading"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:paddingHorizontal="07dp"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="#FF5252"
+                    android:id="@+id/tvdate"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/day"
+                    android:gravity="right"
+                    android:textColor="#17202A"
+                    android:layout_weight="2"
+                    android:text="Day : "
+                    style="@style/heading"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvday"
+                    android:textSize="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="7dp"
+                    android:text=""
+                    android:layout_weight="2"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/from"
+                    android:text="Time  From      : "
+                    style="@style/heading"
+
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvfrom"
+                    android:text=""
+                    android:paddingHorizontal="7dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/to"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#17202A"
+                    android:text="To"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/tvto"
+                    android:layout_weight="3"
+                    android:text=""
+                    android:paddingLeft="7dp"
+                    android:textSize="14dp"
+                    android:layout_gravity="center_vertical"
+                    />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/probid"
+                style="@style/heading"
+                android:textColor="@color/material_red_a700"
+                android:layout_marginTop="2dp"
+                android:text="Problem -"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvprobid"
+                android:textSize="14dp"
+                android:paddingHorizontal="7dp"
+                android:text=""/>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/consultBt"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Consult "
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/login_button_bk"
+                ></androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/prescriptBt"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Prescription "
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@drawable/login_button_bk_header2"
+                >
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

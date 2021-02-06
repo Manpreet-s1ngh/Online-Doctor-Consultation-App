@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.icu.util.Calendar;
+import java.util.Calendar;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,33 +38,37 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
       String p_key,p_email,Start,End,DoctorId,Day;
       String doctorname ="",Doctorphn="",category="";
       String patientName="",Patientno="";
+
       TextView tv222,tv333,tv444,tv555,tv666,tv777,tv888,tv999,tv1000;
-    DatabaseReference doctorref , patientref,BookingRef;
+    DatabaseReference doctorref , patientref,BookingRef,booking,bookingdoctor;
     String problem;
-    String Date;
+    //String Date;
+    String mydate;      ///
     int fees=1;
-    @RequiresApi(api = Build.VERSION_CODES.N)
+  //  @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_appointment);
+
+        //
         final Calendar myCalender= Calendar.getInstance();
        et1 =(EditText) findViewById(R.id.et1);
         SharedPreferences sharedPreference=getSharedPreferences("Patient",MODE_PRIVATE);
         p_key = sharedPreference.getString("Patient_Key","");
         p_email = sharedPreference.getString("UserName","");
 
+      // getting values from intent
         Intent incomingintent = getIntent();
        Start= incomingintent.getStringExtra("Start");
        End= incomingintent.getStringExtra("End");
         DoctorId=incomingintent.getStringExtra("DoctorId");
         Day=incomingintent.getStringExtra("Day");
+        mydate=incomingintent.getStringExtra("date");  /////////////
 
+      et1.setText(mydate);  ////
 
-
-
-
-        final DatePickerDialog.OnDateSetListener date= new DatePickerDialog.OnDateSetListener() {
+        /*final DatePickerDialog.OnDateSetListener date= new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
               myCalender.set(Calendar.YEAR,year);
@@ -84,7 +88,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
             public void onClick(View v) {
                 new DatePickerDialog(ConfirmAppointmentActivity.this,date,myCalender.get(Calendar.YEAR),myCalender.get(Calendar.MONTH),myCalender.get(Calendar.DAY_OF_MONTH)).show();
             }
-        });
+        });*/
 
 
         et2=findViewById(R.id.et2);
@@ -128,7 +132,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
                 tv666.setText(category);
                 tv777.setText(Day);
                 fees=Integer.parseInt(obj.getBasicFees());
-                tv888.setText("Fees :- "+obj.getBasicFees());
+                tv888.setText("Fees :- "+obj.getBasicFees()+" Rs.");
                 tv999.setText(Start);
                 tv1000.setText(End);
 
@@ -166,7 +170,7 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
     }
     public void Proceed(View view) {
         problem = et2.getText().toString();
-        Date =et1.getText().toString();
+       // Date =et1.getText().toString();
         startPayment();
     }
 
@@ -214,9 +218,23 @@ public class ConfirmAppointmentActivity extends AppCompatActivity implements Pay
         Toast.makeText(this, "Success  "+s, Toast.LENGTH_SHORT).show();
         String bookingkey = BookingRef.push().getKey();
 
-        Booking obj = new Booking(p_key,patientName,Patientno,Day,Start,End,DoctorId,doctorname,category,Doctorphn,problem,"booked",Date,bookingkey);
+        Booking obj = new Booking(p_key , patientName, Patientno , Day , Start , End , DoctorId ,
+                                  doctorname,category,Doctorphn,problem,"booked", mydate ,bookingkey);
         BookingRef.child(bookingkey).setValue(obj);
-        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
+
+        BookedSlots mob=new BookedSlots(mydate,Start,End,mydate+"--"+Start);
+       // Log.d("MYMSG","object created Successfully");
+
+        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+        booking = firebaseDatabase.getReference("BookedSlots");
+        bookingdoctor=booking.child(DoctorId);
+
+        String mykey = bookingdoctor.push().getKey();
+       // Log.d("MYMSG","Key Saved Successfully");
+        bookingdoctor.child(mykey).setValue(mob);
+        //Log.d("MYMSG","Data Saved Successfully");
+
+        //Toast.makeText(this, "Slot Booked Successfully", Toast.LENGTH_SHORT).show();
         finish();
 
     }

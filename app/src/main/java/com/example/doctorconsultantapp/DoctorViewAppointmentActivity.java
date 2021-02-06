@@ -44,8 +44,8 @@ public class DoctorViewAppointmentActivity extends AppCompatActivity {
 
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        mainref= firebaseDatabase.getReference("BookingDetails");
-        mainref.orderByChild("doctorId").equalTo(d_key).addValueEventListener(new ValueEventListener() {
+         mainref= firebaseDatabase.getReference("BookingDetails");
+         mainref.orderByChild("doctorId").equalTo(d_key).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 al.clear();

@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main"
-    android:orientation="vertical">
+    tools:showIn="@layout/app_bar_doctor_home"
+    android:orientation="vertical"
+    >
 
-    <ImageView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+             android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:id="@+id/managePresciptionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+
+            android:text="Prescription"
+            android:textStyle="bold"
+
+            android:background="@drawable/roundedbutton"
+            android:textColor="@color/white"
+
+            ></androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+  android:layout_weight="1"
+            android:layout_marginRight="6dp"
+            android:id="@+id/manageGalleryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+
+            android:text="Gallery"
+            android:textStyle="bold"
+
+            android:background="@drawable/roundedbutton"
+            android:textColor="@color/white"
+
+            ></androidx.appcompat.widget.AppCompatButton>
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:layout_marginRight="2dp"
+            android:id="@+id/leaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_weight="1"
+            android:text="Add Leave"
+            android:textStyle="bold"
+
+            android:background="@drawable/roundedbutton2"
+            android:textColor="@color/white"
+
+            ></androidx.appcompat.widget.AppCompatButton>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Today's Appointment"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        ></TextView>
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center"
+        android:background="@color/primaryTextColor"
+
+        ></LinearLayout>
+    <ListView
+        android:id="@+id/todayAPlist"
+        android:layout_marginTop="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></ListView>
+
+
+
+    <!--<ImageView
         android:id="@+id/imv1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088" />
+        android:layout_height="200dp"
+        android:layout_marginBottom="10dp"
+     />
 
     <TextView
         android:id="@+id/tv1"
@@ -26,11 +98,7 @@
         android:layout_height="wrap_content"
         android:hint="Name"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imv1"
-        app:layout_constraintVertical_bias="0.166" />
+        />
 
     <TextView
         android:id="@+id/tv2"
@@ -38,11 +106,7 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv1"
-        app:layout_constraintVertical_bias="0.118" />
+         />
 
     <TextView
         android:id="@+id/tv3"
@@ -50,12 +114,7 @@
         android:layout_height="wrap_content"
         android:hint="PhoneNo"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv2"
-        app:layout_constraintVertical_bias="0.175" />
+         />
 
     <TextView
         android:id="@+id/tv4"
@@ -63,12 +122,16 @@
         android:layout_height="wrap_content"
         android:hint="Experience"
         android:textSize="24sp"
+         />-->
+<!--
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fab"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv3"
-        app:layout_constraintVertical_bias="0.303" />
+        app:layout_constraintRight_toRightOf="parent"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -7,7 +7,25 @@
     tools:context=".ManagePrescriptionActivity"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"
+        android:textSize="23dp"
+        android:text="List Of Patients"
+        android:gravity="center_horizontal"
+        ></TextView>
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#000000"
+        ></LinearLayout>
     <ListView
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="4dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lv1"/>

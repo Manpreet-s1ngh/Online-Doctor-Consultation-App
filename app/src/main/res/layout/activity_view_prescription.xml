@@ -4,9 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewPrescriptionActivity" >
+    android:padding="5dp"
+    tools:context=".ViewPrescriptionActivity"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Doctor's Prescription"
+        android:textColor="@color/primaryTextColor"
+        android:textStyle="bold"
+        android:textSize="23dp"
+        android:gravity="center"
+        android:layout_marginVertical="4dp"
+
+        />
+    <View
+        android:layout_width="200dp"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_gravity="center_horizontal"
+        ></View>
 
     <ListView
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lv1"/>

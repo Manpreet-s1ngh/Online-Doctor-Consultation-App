@@ -5,8 +5,25 @@
 
     android:orientation="vertical"
     android:weightSum="2"
+    android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Prescription"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+
+        android:layout_margin="5dp"></TextView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="50dp"
+        android:background="#40C4FF"
+        android:layout_marginBottom="5dp"></LinearLayout>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -20,51 +37,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv1"
-        android:layout_weight="1"
+
         android:layout_marginTop="20dp"
         android:textSize="24sp"
-        android:text="Title"/>
+        style="@style/heading"
+        android:text="Title    : "/>
 
     <TextView
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv2"
         android:layout_marginTop="20dp"
+        android:paddingLeft="7dp"
+        android:gravity="center_vertical"
         android:text=""
-        android:textSize="24sp"/>
+        android:textSize="20sp"/>
 </LinearLayout>
 
 <LinearLayout
-android:orientation="horizontal"
+android:orientation="vertical"
 android:weightSum="2"
 android:layout_width="match_parent"
 android:layout_height="wrap_content">
 
 <TextView
-    android:layout_width="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/tv11"
-    android:layout_weight="1"
-    android:layout_gravity="right"
-    android:layout_marginTop="20dp"
+    style="@style/heading"
+
     android:textSize="24sp"
-    android:text="Description"/>
+    android:text="Description : "/>
 
     <TextView
+        android:layout_marginTop="4dp"
         android:id="@+id/tv22"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="20dp"
-        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="7dp"
         android:text=""
-        android:textSize="24sp" />
-
-
+        android:textSize="22sp" />
 
 </LinearLayout>
+
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:weightSum="2"
         android:orientation="vertical"

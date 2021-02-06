@@ -148,4 +148,12 @@
     <color name="pressnormal">#B4FFFFFF</color>
     <color name="white">#FFFFFF</color>
 
+    <!--colors for modern ui-->
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#00a5ff</color>
+    <color name="loginBkColor">#FCFDFD</color>
+
+    <!--colros for card-->
+    <color name="whiteCardColor">#fff</color>
+
 </resources>

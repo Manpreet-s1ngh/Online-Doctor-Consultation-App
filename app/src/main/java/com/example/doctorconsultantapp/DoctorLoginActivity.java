@@ -48,6 +48,74 @@ public class DoctorLoginActivity extends AppCompatActivity {
 
         mainref1 = firebaseDatabase.getReference("DoctorDetails");
 
+   Bt1.setOnClickListener(new View.OnClickListener() {
+       @Override
+       public void onClick(View view) {
+            ///
+           final String Doctorid = et1.getText().toString();
+           final String pass = et2.getText().toString();
+           if (et1.getText().toString().trim().length() == 0) {
+               et1.setError("UserName is Required");
+               et1.requestFocus();
+           } else if (et2.getText().toString().trim().length() == 0) {
+               et2.setError("Password is Required");
+               et2.requestFocus();
+           } else {
+
+
+               mainref1.addListenerForSingleValueEvent(new ValueEventListener() {
+                   @Override
+                   public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                       Log.d("mymsg", dataSnapshot.toString());
+                       if (dataSnapshot.exists()) {
+                           for (DataSnapshot Doctor : dataSnapshot.getChildren()) {
+                               Doctor_details obj = Doctor.getValue(Doctor_details.class);
+                               Log.d("mymsg", Doctorid + "..." + obj.getEmail() + "...." + pass + "..." + obj.getPassword());
+                               if (Doctorid.equals(obj.getEmail()) && pass.equals(obj.getPassword())) {
+                                   if (obj.getStatus().equals("approve")) {
+                                       SharedPreferences sharedPreferences = getSharedPreferences("Doctor", MODE_PRIVATE);
+                                       SharedPreferences.Editor editor = sharedPreferences.edit();
+                                       editor.putString("Doctorid", obj.getD_key());
+                                       editor.putString("DoctorEmail", obj.getEmail());
+                                       editor.commit();
+                                       flag = 1;
+                                       break;
+                                   } else {
+                                       flag = 4;
+                                       break;
+
+                                   }
+
+                               }
+
+
+                           }
+
+                       } else {
+                           Toast.makeText(DoctorLoginActivity.this, "DB Not Exists", Toast.LENGTH_SHORT).show();
+                       }
+                       if (flag == 1) {
+
+                           Intent intent = new Intent(getApplicationContext(), DoctorHomeActivity.class);
+                           startActivity(intent);
+                           Toast.makeText(DoctorLoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
+
+                       } else if (flag == 4) {
+                           Toast.makeText(DoctorLoginActivity.this, "Your Status is Pending plz contact to admin", Toast.LENGTH_SHORT).show();
+                       } else {
+                           Toast.makeText(DoctorLoginActivity.this, "Login unsuccessfull", Toast.LENGTH_SHORT).show();
+                       }
+                   }
+
+                   @Override
+                   public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                   }
+               });
+           }
+           ///
+       }
+   });
 
     }
 
@@ -56,75 +124,15 @@ public class DoctorLoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void go5(View view) {
+    public void go2(View view) {
         Intent intent = new Intent(getApplicationContext(), Doctor_Forget_Password.class);
         startActivity(intent);
     }
 
 
-    public void go2(View view) {
-        final String Doctorid = et1.getText().toString();
-        final String pass = et2.getText().toString();
-        if (et1.getText().toString().trim().length() == 0) {
-            et1.setError("UserName is Required");
-            et1.requestFocus();
-        } else if (et2.getText().toString().trim().length() == 0) {
-            et2.setError("Password is Required");
-            et2.requestFocus();
-        } else {
+    /*public void go2(View view) {
 
-
-            mainref1.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                    Log.d("mymsg", dataSnapshot.toString());
-                    if (dataSnapshot.exists()) {
-                        for (DataSnapshot Doctor : dataSnapshot.getChildren()) {
-                            Doctor_details obj = Doctor.getValue(Doctor_details.class);
-                            Log.d("mymsg", Doctorid + "..." + obj.getEmail() + "...." + pass + "..." + obj.getPassword());
-                            if (Doctorid.equals(obj.getEmail()) && pass.equals(obj.getPassword())) {
-                                if (obj.getStatus().equals("approve")) {
-                                    SharedPreferences sharedPreferences = getSharedPreferences("Doctor", MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putString("Doctorid", obj.getD_key());
-                                    editor.putString("DoctorEmail", obj.getEmail());
-                                    editor.commit();
-                                    flag = 1;
-                                    break;
-                                } else {
-                                    flag = 4;
-                                    break;
-
-                                }
-
-                            }
-
-
-                        }
-
-                    } else {
-                        Toast.makeText(DoctorLoginActivity.this, "DB Not Exists", Toast.LENGTH_SHORT).show();
-                    }
-                    if (flag == 1) {
-
-                        Intent intent = new Intent(getApplicationContext(), DoctorHomeActivity.class);
-                        startActivity(intent);
-                        Toast.makeText(DoctorLoginActivity.this, "Login Successfull", Toast.LENGTH_SHORT).show();
-
-                    } else if (flag == 4) {
-                        Toast.makeText(DoctorLoginActivity.this, "Your Status is Pending plz contact to admin", Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(DoctorLoginActivity.this, "Login unsuccessfull", Toast.LENGTH_SHORT).show();
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                }
-            });
-        }
-    }
+    }*/
 
 }
 

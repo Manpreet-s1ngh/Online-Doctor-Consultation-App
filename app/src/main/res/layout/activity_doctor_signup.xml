@@ -134,7 +134,9 @@
         android:gravity="center_horizontal"
         android:id="@+id/et7"
         android:hint="Experience"/>
-    <EditText
+
+
+    <!--<EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -145,7 +147,9 @@
         android:fontFamily="@font/avenir_ltstd_medium"
         android:gravity="center_horizontal"
         android:id="@+id/et8"
-        android:hint="Service"/>
+        android:hint="Service"/>-->
+
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -183,7 +187,7 @@
         android:fontFamily="@font/avenir_ltstd_medium"
         android:gravity="center_horizontal"
         android:id="@+id/et_address"
-        android:inputType="time"
+        android:inputType="text"
         android:hint="Address"/>
     <Spinner
         android:layout_width="match_parent"
@@ -193,6 +197,7 @@
        android:layout_gravity="center"
        android:layout_width="250dp"
        android:layout_height="250dp"
+       android:background="#F8F7F7"
        android:id="@+id/imv1"/>
     <LinearLayout
         android:weightSum="2"

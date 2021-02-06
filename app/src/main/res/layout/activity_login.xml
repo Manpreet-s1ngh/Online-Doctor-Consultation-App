@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/gradienttwo"
+    android:background="@drawable/gradienttwo_new1"
     android:orientation="vertical">
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -101,19 +101,19 @@
                         android:gravity="center">
 
 
-                        <!--                        <TextView-->
-                        <!--                            android:layout_width="wrap_content"-->
-                        <!--                            android:layout_height="match_parent"-->
-                        <!--                            android:textColor="#E75E5C"-->
-                        <!--                            android:textSize="14sp"-->
-                        <!--                            android:text="GET STARTED"-->
-                        <!--                            android:gravity="center"-->
-                        <!--                            android:textStyle="bold"/>-->
-                        <Button
+                        &lt;!&ndash;                        <TextView&ndash;&gt;
+                        &lt;!&ndash;                            android:layout_width="wrap_content"&ndash;&gt;
+                        &lt;!&ndash;                            android:layout_height="match_parent"&ndash;&gt;
+                        &lt;!&ndash;                            android:textColor="#E75E5C"&ndash;&gt;
+                        &lt;!&ndash;                            android:textSize="14sp"&ndash;&gt;
+                        &lt;!&ndash;                            android:text="GET STARTED"&ndash;&gt;
+                        &lt;!&ndash;                            android:gravity="center"&ndash;&gt;
+                        &lt;!&ndash;                            android:textStyle="bold"/>&ndash;&gt;
+                        <androidx.appcompat.widget.AppCompatButton
 
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:textColor="#E75E5C"
+                            android:textColor="#FF5252"
                             android:textSize="14sp"
                             android:background="@android:color/transparent"
                             android:text="Login"
@@ -122,11 +122,11 @@
                             android:textStyle="bold"/>
 
                     </LinearLayout>
-                    <!--                    <FrameLayout-->
-                    <!--                        android:id="@+id/button2"-->
-                    <!--                        android:layout_width="match_parent"-->
-                    <!--                        android:layout_height="match_parent">-->
-                    <!--                    </FrameLayout>-->
+                    &lt;!&ndash;                    <FrameLayout&ndash;&gt;
+                    &lt;!&ndash;                        android:id="@+id/button2"&ndash;&gt;
+                    &lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;
+                    &lt;!&ndash;                        android:layout_height="match_parent">&ndash;&gt;
+                    &lt;!&ndash;                    </FrameLayout>&ndash;&gt;
 
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
@@ -136,45 +136,191 @@
         </LinearLayout>
 
 
-        <!--        <LinearLayout-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center"-->
-        <!--            android:layout_marginTop="20dp"-->
-        <!--            android:orientation="horizontal">-->
+        &lt;!&ndash;        <LinearLayout&ndash;&gt;
+        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;
+        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;
+        &lt;!&ndash;            android:layout_gravity="center"&ndash;&gt;
+        &lt;!&ndash;            android:layout_marginTop="20dp"&ndash;&gt;
+        &lt;!&ndash;            android:orientation="horizontal">&ndash;&gt;
 
-        <!--            <ImageView-->
-        <!--                android:layout_width="50dp"-->
-        <!--                android:layout_height="50dp"-->
-        <!--                android:src="@drawable/ic_facebook_round"-->
-        <!--                android:id="@+id/facebook_round"/>-->
+        &lt;!&ndash;            <ImageView&ndash;&gt;
+        &lt;!&ndash;                android:layout_width="50dp"&ndash;&gt;
+        &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;
+        &lt;!&ndash;                android:src="@drawable/ic_facebook_round"&ndash;&gt;
+        &lt;!&ndash;                android:id="@+id/facebook_round"/>&ndash;&gt;
 
-        <!--            <ImageView-->
-        <!--                android:layout_width="50dp"-->
-        <!--                android:layout_height="50dp"-->
-        <!--                android:layout_marginLeft="25dp"-->
-        <!--                android:src="@drawable/ic_twitter_round"-->
-        <!--                android:id="@+id/twitter_round"/>-->
-        <!--        </LinearLayout>-->
+        &lt;!&ndash;            <ImageView&ndash;&gt;
+        &lt;!&ndash;                android:layout_width="50dp"&ndash;&gt;
+        &lt;!&ndash;                android:layout_height="50dp"&ndash;&gt;
+        &lt;!&ndash;                android:layout_marginLeft="25dp"&ndash;&gt;
+        &lt;!&ndash;                android:src="@drawable/ic_twitter_round"&ndash;&gt;
+        &lt;!&ndash;                android:id="@+id/twitter_round"/>&ndash;&gt;
+        &lt;!&ndash;        </LinearLayout>&ndash;&gt;
 
-        <!--        <LinearLayout-->
-        <!--            android:id="@+id/signin"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="50dp">-->
-        <!--            <TextView-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="match_parent"-->
-        <!--                android:text="FORGOT PASSWORD"-->
-        <!--                android:textSize="14sp"-->
-        <!--                android:textColor="#FFFFFF"-->
-        <!--                android:gravity="center"/>-->
+        &lt;!&ndash;        <LinearLayout&ndash;&gt;
+        &lt;!&ndash;            android:id="@+id/signin"&ndash;&gt;
+        &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;
+        &lt;!&ndash;            android:layout_height="50dp">&ndash;&gt;
+        &lt;!&ndash;            <TextView&ndash;&gt;
+        &lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;
+        &lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;
+        &lt;!&ndash;                android:text="FORGOT PASSWORD"&ndash;&gt;
+        &lt;!&ndash;                android:textSize="14sp"&ndash;&gt;
+        &lt;!&ndash;                android:textColor="#FFFFFF"&ndash;&gt;
+        &lt;!&ndash;                android:gravity="center"/>&ndash;&gt;
 
-        <!--        </LinearLayout>-->
+        &lt;!&ndash;        </LinearLayout>&ndash;&gt;
 
-    </LinearLayout>
+    </LinearLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout style="@style/parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:weightSum="12"></LinearLayout>
+
+            <LinearLayout
+                style="@style/parent"
+                android:layout_weight="3"
+                android:background="@drawable/login_button_bk_head"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/parent"
+                    android:background="@drawable/ic_login_bk"
+                    android:contentDescription="login background" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="30dp"
+                android:orientation="vertical">
 
 
-    <LinearLayout
+                <!--<TextView
+                    style="@style/headerText"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:text=" Welcome to\nOnlineDoncorConsultation" />
+                -->
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/admin"></ImageView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="0dp"
+
+                    app:cardBackgroundColor="@color/white"
+                    android:layout_marginBottom="20dp"
+                    >
+                    <LinearLayout
+                        style="@style/linearParent"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/loginViewsMargin">
+
+                        <TextView
+                            style="@style/headerTextPrimary"
+                            android:textColor="#D500F9"
+                            android:text="Login"
+                            android:layout_marginTop="@dimen/loginViewsMargin"/>
+                        <LinearLayout
+                            android:layout_marginTop="5dp"
+                            android:layout_width="120dp"
+                            android:layout_height="2dp"
+                            android:layout_gravity="center_horizontal"
+                            android:background="#D500F9"
+                            ></LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:hint="Email"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            app:hintTextColor="#D500F9"
+                            app:boxStrokeColor="#D500F9"
+                            android:layout_marginTop="35dp">
+                            <com.google.android.material.textfield.TextInputEditText
+
+                                android:maxLines="1"
+                                android:maxLength="20"
+                                android:id="@+id/staffname"
+                                android:imeOptions="actionNext"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                ></com.google.android.material.textfield.TextInputEditText>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/login_password_hint"
+                            app:hintTextColor="#D500F9"
+                            app:boxStrokeColor="#D500F9"
+                            app:passwordToggleEnabled="true"
+                            android:layout_marginTop="15dp">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/staffpassword"
+                                android:imeOptions="actionNext"
+                                android:maxLength="15"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPassword"
+                                ></com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/Bt1"
+                            android:layout_marginBottom="30dp"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="#ffffff"
+                            android:text="Login"
+                            android:textStyle="bold"
+                            android:background="@drawable/login_button_bk_head"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="30dp"/>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                />
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#3B000000"
@@ -201,7 +347,7 @@
             android:textColor="#FFFFFF"/>
 
 
-    </LinearLayout>
+    </LinearLayout>-->
 
 
 

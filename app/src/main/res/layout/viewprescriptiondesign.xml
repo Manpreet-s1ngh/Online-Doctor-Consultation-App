@@ -1,142 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:orientation="vertical"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv1"
-                android:layout_weight="1"
-                android:layout_marginTop="20dp"
-                android:textSize="24sp"
-                android:text="Doctor Name"/>
-
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv2"
-                android:layout_marginTop="20dp"
-                android:text=""
-                android:textSize="24sp"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:weightSum="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv11"
-                android:layout_weight="1"
-                android:layout_gravity="right"
-                android:layout_marginTop="20dp"
-                android:textSize="24sp"
-                android:text="Category"/>
-
-            <TextView
-                android:id="@+id/tv22"
-                android:layout_width="wrap_content"
-                android:layout_height="35dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="20dp"
-                android:layout_weight="1"
-                android:text=""
-                android:textSize="24sp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
 
 
+    android:background="#32E8E8E6"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+       <androidx.cardview.widget.CardView
+           android:layout_marginTop="5dp"
+           android:layout_marginBottom="5dp"
+           android:layout_marginHorizontal="3dp"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           app:cardCornerRadius="20dp"
+           >
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical"
+               android:layout_margin="10dp">
 
-        </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+               <LinearLayout
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv111"
-            android:layout_weight="1"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:textSize="24sp"
-            android:text="Title"/>
+                   android:orientation="horizontal"
 
-        <TextView
-            android:id="@+id/tv222"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:text=""
-            android:textSize="24sp" />
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
 
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/tv1"
+                       android:gravity="center_vertical"
+                       android:textStyle="bold"
+                       android:textSize="20dp"
+                       android:paddingLeft="5dp"
+                       android:textColor="#000000"
+                       android:text="Doctor Name : "/>
 
+                   <TextView
+                       android:layout_weight="1"
+                       android:layout_width="match_parent"
+                       android:paddingLeft="7dp"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+                       android:id="@+id/tv2"
 
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                       android:text=""
+                       android:textSize="18sp"/>
+               </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/tv1111"
-            android:layout_weight="1"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:textSize="24sp"
-            android:text="Description"/>
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp">
 
-        <TextView
-            android:id="@+id/tv2222"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:layout_gravity="right"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:text=""
-            android:textSize="24sp" />
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/tv11"
+                       android:textColor="#000000"
+                       android:textSize="20sp"
+                       android:textStyle="bold"
+                       android:paddingLeft="5dp"
+                       android:gravity="center_vertical"
+                       android:text="Category : "/>
+
+                   <TextView
+                       android:id="@+id/tv22"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_vertical"
+
+                       android:paddingLeft="7dp"
+                       android:layout_weight="1"
+                       android:textSize="18sp"
+
+                       android:text=""
+                       />
+
+               </LinearLayout>
+               <LinearLayout
+                   android:orientation="horizontal"
+                   android:layout_marginTop="5dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/tv111"
+
+                       android:layout_gravity="center_vertical"
+                       android:textSize="20sp"
+                       android:textColor="#000000"
+                       android:paddingLeft="5dp"
+                       android:textStyle="bold"
+                       android:text="Title : "/>
+
+                   <TextView
+                       android:id="@+id/tv222"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+                       android:paddingLeft="7dp"
+                       android:layout_weight="1"
+                       android:text=""
+                       android:textSize="18sp" />
 
 
 
-    </LinearLayout>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginTop="5dp"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
 
-    <LinearLayout
-            android:layout_width="match_parent"
-            android:weightSum="2"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:id="@+id/tv1111"
 
-            <Button
-                android:layout_marginRight="20dp"
-                android:textColor="@color/white"
-                android:background="@drawable/roundedbutton"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:id="@+id/bt_view"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:layout_marginTop="5dp"
-                android:text="View Image"/>
-        </LinearLayout>
+                       android:gravity="center_vertical"
+                       android:textStyle="bold"
+                       android:paddingLeft="5dp"
+                       android:textColor="#000000"
+                       android:textSize="20sp"
+                       android:text="Description : "/>
+
+                   <TextView
+                       android:id="@+id/tv2222"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:gravity="center_vertical"
+
+                       android:layout_weight="1"
+                       android:paddingLeft="7dp"
+                       android:text=""
+                       android:textSize="18sp" />
+
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:weightSum="2"
+                   android:orientation="vertical"
+                   android:layout_height="wrap_content">
+
+                   <androidx.appcompat.widget.AppCompatButton
+                       android:layout_marginRight="20dp"
+                       android:textColor="@color/white"
+                       android:background="@drawable/login_button_bk"
+                       android:layout_weight="1"
+                       android:layout_width="150dp"
+                       android:id="@+id/bt_view"
+                       android:layout_height="50dp"
+                       android:layout_gravity="end"
+                       android:layout_marginTop="5dp"
+                       android:text="View Image"
+                       android:textStyle="bold"/>
+               </LinearLayout>
+
+           </LinearLayout>
+
+
+
+       </androidx.cardview.widget.CardView>
+
+
     </LinearLayout>
 

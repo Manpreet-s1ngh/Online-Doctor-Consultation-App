@@ -6,126 +6,133 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
+
     android:layout_height="match_parent"
     tools:context=".AddFrag">
 
-    <LinearLayout
-        android:weightSum="2"
-        android:layout_marginTop="16dp"
+<androidx.cardview.widget.CardView
+    android:layout_margin="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="10dp"
+    >
+    <ScrollView
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_weight="1"
-            android:id="@+id/tv1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Caption"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.227"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.193" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <LinearLayout
 
-        <EditText
-            android:layout_weight="1"
-            android:id="@+id/etcaption"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="caption"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.574"
-            app:layout_constraintStart_toEndOf="@+id/tv1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.179" />
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <TextView
+
+                    android:id="@+id/tv1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Caption   :"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.227"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.193" />
+
+                <EditText
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="10dp"
+                    android:id="@+id/etcaption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="caption"
+                    android:textSize="24sp"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="PHOTO"
+                android:textStyle="bold"
+                android:fontFamily="@font/avenir_ltstd_heavy"
+                android:id="@+id/tvcustomer_home"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:textColor="@color/material_gray_900"/>
+            <ImageView
+                android:id="@+id/imv1"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFDFD"
+                />
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/roundedbutton2"
+                    android:textColor="@color/white"
+                    android:paddingHorizontal="30dp"
+                    android:id="@+id/button6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="From Gallery"
+
+                    />
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="or"></TextView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:background="@drawable/roundedbutton2"
+                    android:textColor="@color/white"
+                    android:paddingHorizontal="30dp"
+                    android:id="@+id/Bt333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    android:text="From Camera"
+
+                    />
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Bt111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="40dp"
+                android:background="@drawable/login_button_bk"
+                android:textColor="@color/white"
+                android:text="Submit"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.cardview.widget.CardView>
 
 
 
 
-
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:text="PHOTO"
-        android:textStyle="bold"
-        android:fontFamily="@font/avenir_ltstd_heavy"
-        android:id="@+id/tvcustomer_home"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:textColor="@color/material_gray_900"/>
-    <ImageView
-        android:id="@+id/imv1"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv3"
-        app:layout_constraintVertical_bias="0.137" />
-    <LinearLayout
-        android:weightSum="2"
-        android:layout_marginTop="16dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:background="@drawable/roundedbutton"
-            android:textColor="@color/white"
-            android:layout_weight="1"
-            android:id="@+id/button6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="35dp"
-            android:text="From Gallery"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.072"
-            app:layout_constraintStart_toEndOf="@+id/Bt111"
-            app:layout_constraintTop_toBottomOf="@+id/imv1"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <Button
-            android:background="@drawable/roundedbutton"
-            android:textColor="@color/white"
-            android:layout_weight="1"
-            android:id="@+id/Bt333"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="35dp"
-            android:text="From Camera"
-            android:textStyle="italic"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
-            app:layout_constraintStart_toEndOf="@+id/button6"
-            app:layout_constraintTop_toBottomOf="@+id/imv1"
-            app:layout_constraintVertical_bias="0.0" />
-    </LinearLayout>
-    <Button
-        android:id="@+id/Bt111"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:background="@drawable/roundedbutton"
-        android:textColor="@color/white"
-        android:text="Submit"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imv1"
-        app:layout_constraintVertical_bias="0.0" />
 
 
 

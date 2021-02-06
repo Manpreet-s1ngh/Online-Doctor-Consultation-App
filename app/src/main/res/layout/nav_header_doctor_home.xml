@@ -1,36 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_name"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingTop="10dp"
+
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="Doctor menus"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:src="@drawable/abc" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
-        android:text="@string/nav_header_title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            >
+           <!-- <ImageView
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/nav_header_subtitle" />
+                android:id="@+id/imageView_nav"
+                android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="Doctor menus"
+
+                android:src="#ffffff" />-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/myCardView"
+                android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="50dp"
+                app:cardBackgroundColor="#00E5FF"
+                android:layout_gravity="center"
+                >
+                <ImageView
+                    android:id="@+id/imageView_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    />
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"></View>
+                <TextView
+                    android:id="@+id/name_nav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="Manpreet Singh"
+                    />
+
+
+                <TextView
+
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/phone_nav"
+
+                    android:gravity="right"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:textSize="13sp"
+
+                    android:textColor="#000000"
+                    android:text="9872198555" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <TextView
+            android:gravity="right"
+
+            android:id="@+id/mail_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:paddingRight="10dp"
+             android:layout_marginTop="10dp"
+            android:text="singh.manpreet98721@gmail.com" />
+    </LinearLayout>
+
+
+
+
 
 </LinearLayout>

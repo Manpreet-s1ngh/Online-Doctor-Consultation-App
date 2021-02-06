@@ -36,9 +36,10 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 
 public class DoctorSignupActivity extends AppCompatActivity {
-    EditText et1, et2, et3, et4, et5, et6, et7, et8, et9, et10,et_address;
+    EditText et1, et2, et3, et4, et5, et6, et7, et9, et10,et_address;
     StorageReference mainref2;
     DatabaseReference mainref_db;
+    DatabaseReference booking;
 
     ImageView imv1;
     ArrayList<String> al;
@@ -65,7 +66,7 @@ public class DoctorSignupActivity extends AppCompatActivity {
         et5 = findViewById(R.id.et5);
         et6 = findViewById(R.id.et6);
         et7 = findViewById(R.id.et7);
-        et8 = findViewById(R.id.et8);
+        //et8 = findViewById(R.id.et8);
         et9 = findViewById(R.id.et9);
         et10 = findViewById(R.id.et10);
         et_address = findViewById(R.id.et_address);
@@ -124,7 +125,8 @@ public class DoctorSignupActivity extends AppCompatActivity {
         PhoneNo = et5.getText().toString();
         BasicFees = et6.getText().toString();
         Experience = et7.getText().toString();
-        Service = et8.getText().toString();
+       // Service = et8.getText().toString();
+        Service="service";
         StartHour = et9.getText().toString();
         EndHour = et10.getText().toString();
         address = et_address.getText().toString();
@@ -167,9 +169,16 @@ public class DoctorSignupActivity extends AppCompatActivity {
                             public void onSuccess(Uri uri) {
                                 String downloadpath = uri.toString();
                                 String key = mainref_db.push().getKey();
-
                                 Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending",address);
                                 mainref_db.child(key).setValue(obj);
+
+                                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+//        mainref_storage = firebaseStorage.getReference("/");
+                                booking = firebaseDatabase.getReference("BookedSlots");
+
+                                booking.setValue(key);
+
+
                                 finish();
 
 
@@ -208,6 +217,10 @@ public class DoctorSignupActivity extends AppCompatActivity {
 
                                 Doctor_details obj = new Doctor_details(Fullname, Email, Password, drcategory, PhoneNo, BasicFees, Experience, Service, StartHour, EndHour, downloadpath, key,"pending",address);
                                 mainref_db.child(key).setValue(obj);
+
+                                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                                booking = firebaseDatabase.getReference("BookedSlots");
+                                booking.setValue(key);
                                 finish();
 
 

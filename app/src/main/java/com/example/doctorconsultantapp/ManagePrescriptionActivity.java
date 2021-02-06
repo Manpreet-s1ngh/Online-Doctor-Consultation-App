@@ -51,7 +51,7 @@ public class ManagePrescriptionActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 al.clear();
-                Log.d("snap", dataSnapshot.toString());
+               // Log.d("snap", dataSnapshot.toString());
                 if (dataSnapshot.exists()) {
                     for (DataSnapshot sin : dataSnapshot.getChildren()) {
                         PatientDetails obj = sin.getValue(PatientDetails.class);
@@ -63,11 +63,8 @@ public class ManagePrescriptionActivity extends AppCompatActivity {
 
 
                 }
-
-
-
-                 else{
-                    Toast.makeText(ManagePrescriptionActivity.this, "No Appointment Yet", Toast.LENGTH_SHORT).show();
+                else{
+                    Toast.makeText(ManagePrescriptionActivity.this, "No Patient Yet", Toast.LENGTH_SHORT).show();
                 }
 
 

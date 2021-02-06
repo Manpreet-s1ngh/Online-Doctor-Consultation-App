@@ -9,7 +9,7 @@
     android:id="@+id/cardview1"
     android:layout_marginTop="5dp"
 
-    app:cardCornerRadius="10dp"
+    app:cardCornerRadius="30dp"
     app:cardElevation="20dp"
     android:orientation="vertical">
 
@@ -18,7 +18,7 @@
         android:weightSum="2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ABEBC6">
+        android:background="#8A50DDEF">
 
         <LinearLayout
             android:layout_weight="1"

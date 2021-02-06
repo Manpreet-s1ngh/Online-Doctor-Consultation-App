@@ -15,24 +15,40 @@
         tools:context=".splashscreen"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@drawable/gradienttwo">
+
+        android:background="@drawable/gradienttwo"
+    >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WELCOME "
             android:textStyle="bold"
-            android:textColor="@color/white"
             android:id="@+id/tv1"
-            android:textSize="40sp"
+
+            android:text="Online\n DoctorConsultation"
+            android:textColor="#000000"
+
+
+            android:textSize="20sp"
             android:gravity="center"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="0dp"
             />
         <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
             android:id="@+id/imv1"
-            android:src="@drawable/abc"/>
+            android:src="@drawable/sp1"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+
+
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginBottom="30dp"
+            />
 
 
 
@@ -41,11 +57,11 @@
         android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Designed and Developed by \n Yoginder Singh "
-        android:textStyle="bold"
+        android:text="Designed and Developed by \nManpreet, Karandip,Manjeet,Maninder "
+
         android:id="@+id/tv2"
-        android:textSize="20sp"
+        android:textSize="12sp"
         android:gravity="center"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="30dp"/>
 </RelativeLayout>

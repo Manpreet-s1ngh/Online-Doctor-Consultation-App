@@ -1,6 +1,6 @@
 package com.example.doctorconsultantapp;
 
-public class Booking
+public class Booking implements Comparable
 {
     String P_Key,P_Name,P_Mobile;
     String SlotDay,Start,End;
@@ -140,4 +140,16 @@ public class Booking
     public void setBookingKey(String bookingKey) {
         BookingKey = bookingKey;
     }
+
+   /* public int compareTo(Booking o) {
+        return this.getStart().compareTo(o.getStart());
+    }*/
+
+    @Override
+    public int compareTo(Object o) {
+        Booking o2  = (Booking) o;
+        return this.getStart().compareTo(o2.getStart());
+       // return 0;
+    }
+
 }
